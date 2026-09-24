@@ -47,9 +47,6 @@ Este inventário registra todos os arquivos preservados após a curadoria de 202
 | `levantamento-de-requisitos/fontes-canonicas/requisitos-originais/lista_de_funcionalidades_tecnicas.md` | Fonte | Levantamento original | `9C51D9F1ABDA7336096D24CBFE636B7BD4A3D15764FB3DE2538BB5D9DC60CAA6` |
 | `levantamento-de-requisitos/fontes-canonicas/requisitos-originais/pontos_em_aberto.md` | Fonte | Levantamento original | `34A0F9EC7A3B8DBE2E366F621883035278FFE7C480C50DA878669D8B27A59DFA` |
 | `planejamento/backlog-completo.xlsx` | Vigente | Backlog operacional | `B01BC8E0644F6D006F02188D7BF38D4C231F98AAE5E7C357B1B78BA901AD51F3` |
-| `planejamento/fontes-historicas/Agiliza_Transparencia_Funcionalidades_MVP_v2.docx` | Histórico | Planejamento recebido | `443EBD58DC8C1AA8D9DFAA5DDD6E4BF0439C6294478A18177FBD37D87EDD1B21` |
-| `planejamento/fontes-historicas/planejamento-backend-agiliza-transparencia.xlsx` | Histórico | Planejamento recebido | `CC0A7D87956DBCAEEB8F485EC0ABD3222BC6A228E627510A3B361712C5703C84` |
-| `planejamento/fontes-historicas/Resposta_Minuta_e_Roadmap_Agiliza_Transparencia_V1_V2_V3_Futuro_2026-08-24.docx` | Histórico | Planejamento recebido | `D21EEEBC25EDB7647EEC7C5D68E00F888A7DEE743F51FF16488F1DEE90754899` |
 | `relatorios/documentacao-projeto/relatorio-de-mudancas.md` | Acompanhamento | Biblioteca STC | `2FE8B74394D542090B936283C503A27C0F397ED45227F4D738B8604B79F52447` |
 | `relatorios/FAPEMA/modelos/atividades-extras.xlsx` | Relatório FAPEMA | Acervo FAPEMA | `90F7B243FB6C62DAF551F6466C875073EA4F89E17839ECC40896C4718EE16CF3` |
 | `relatorios/FAPEMA/modelos/modelo de relatorio quinzenal - responsavel.docx` | Relatório FAPEMA | Acervo FAPEMA | `3A0F5C020A61C09AFE1465DF43DDB59143F739CC64D0633A2E597CEBE5355833` |
