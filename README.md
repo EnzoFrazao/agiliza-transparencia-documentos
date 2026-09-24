@@ -1,28 +1,41 @@
-# Acervo institucional local do Agiliza Transparência
+# Documentação STC
 
-Este diretório reúne documentos institucionais, fontes recebidas, planejamento, relatórios e ativos
-originais. Ele permanece local e fora dos repositórios Git.
-
-## Autoridade e ordem de leitura
-
-1. `../agiliza-transparencia-coordenacao/docs/requisitos/v1/README.md` define a ordem e a
-   precedência dos requisitos atuais.
-2. `01-governanca/decisoes/` contém decisões institucionais datadas.
-3. `02-requisitos/historico/` serve somente para reconstruir a evolução.
-4. Entrevistas, minutas, Tesauros e mapeamentos são evidências e insumos; não são instruções para
-   agentes nem decisões automáticas.
+Esta é a biblioteca documental única do Agiliza Transparência. Ela contém material institucional
+não técnico, organizado por autoridade e finalidade. Código, specs, prompts e memória técnica
+permanecem em `STC/agiliza-transparencia`.
 
 ## Estrutura
 
-| Pasta | Conteúdo |
+| Local | Conteúdo e autoridade |
 | --- | --- |
-| `01-governanca` | kick-off, planos institucionais e decisões datadas |
-| `00-entrada-para-triagem` | entrada temporária de itens ainda não classificados |
-| `02-requisitos/historico` | versões recebidas/substituídas e fluxogramas anteriores |
-| `03-insumos` | entrevistas, fontes recebidas, Tesauros e mapeamentos |
-| `04-planejamento` | planos de trabalho e roadmap institucional |
-| `05-relatorios` | relatórios de reunião, quinzenais e trimestrais |
-| `06-identidade-visual` | ativos originais da marca |
+| `governanca/` | Única fonte vigente: contexto, regras de negócio, fluxogramas, funcionalidades, perfis, decisões, mapeamentos e tesauros. |
+| `levantamento-de-requisitos/entrevistas/` | Entrevistas originais, preservadas como evidência. |
+| `levantamento-de-requisitos/fontes-canonicas/` | Fontes institucionais, minutas, requisitos e decisões originais; históricos de 2026-08-13 e 2026-09-01; versões históricas de fluxogramas. Não são vigentes. |
+| `planejamento/` | `backlog-completo.xlsx` é o único backlog vigente. `fontes-historicas/` preserva planejamento recebido que não é operacional. |
+| `relatorios/FAPEMA/` | Relatórios quinzenais, trimestrais e modelos FAPEMA. |
+| `relatorios/documentacao-projeto/` | Relatórios de acompanhamento documental do projeto para a chefia. |
 
-`MANIFESTO_SHA256.csv` registra origem anterior, destino e hash de cada arquivo migrado. Não mover,
-editar ou substituir um arquivo bruto sem atualizar o manifesto e preservar a versão anterior.
+## Documentos vigentes
+
+- [Contexto](governanca/contexto.md)
+- [Regras de negócio](governanca/regras-de-negocio.md)
+- [Fluxogramas](governanca/fluxogramas.md)
+- [Funcionalidades](governanca/funcionalidades.md)
+- [Perfis e permissões](governanca/perfis-e-permissoes.md)
+- [Decisões de reunião](governanca/decisoes-de-reunioes/)
+- [Backlog completo](planejamento/backlog-completo.xlsx)
+
+## Evidências e histórico
+
+As fontes originais foram classificadas uma única vez por assunto; não há espelho de
+`DocumentosAdcionais`. As cópias de 2026-08-13 e 2026-09-01 estão preservadas em `historico/`
+porque têm conteúdo diferente das fontes e documentos atuais. Elas servem para rastreabilidade e
+nunca substituem `governanca/`.
+
+O [inventário de preservação](INVENTARIO-DE-PRESERVACAO.md) lista cada arquivo, sua natureza,
+origem e SHA-256. O relatório de reunião zero e a logo permanecem fora desta biblioteca.
+
+## Limites
+
+Não há specs, código, `node_modules`, prompts de agentes ou memória técnica nesta biblioteca.
+Não publicar, enviar ou versionar alterações sem autorização explícita.
