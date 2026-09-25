@@ -1,23 +1,47 @@
-# Levantamento de requisitos — Agiliza Transparência
+# Regras de negócio — Agiliza Transparência
 
-**Versão:** 7.0  
-**Data:** 2026-09-10  
+**Versão:** 8.1  
+**Data:** 2026-09-25  
 **Fontes normativas:** decisões de 31/08 em
 [`decisoes-de-reunioes/2026-08-31-reuniao-apresentacao-agiliza.md`](decisoes-de-reunioes/2026-08-31-reuniao-apresentacao-agiliza.md)
 e consolidação posterior registrada em [`contexto.md`](contexto.md).
 
 ## 1. Objetivo
 
-Especificar o comportamento esperado da plataforma para criação de ciclos, distribuição de
-coletas institucionais, contribuições por adjunta, conferência pela UG e validação pela STC.
+Preservar o contrato histórico do produto e declarar, sem ambiguidade, quais partes pertencem à
+V1 mínima, ao MVP completo, a uma pendência ou a uma evolução futura.
 
 Esta versão preserva os IDs históricos sempre que o requisito continua válido. Os requisitos da
 reunião de 31/08 começam em RF-090. Requisitos superados não definem comportamento; são listados no
 histórico.
 
-## 2. Escopo
+## 2. Escopo e precedência
 
-### 2.1 Incluído
+1. Decisões humanas datadas e o backlog ativo prevalecem sobre formulações antigas em conflito.
+2. A aba **Lista completa** de `planejamento/backlog-completo.xlsx` delimita o MVP completo.
+3. As abas **Sprint 9** a **Sprint 14** delimitam a V1 mínima executável.
+4. Um requisito abaixo só é exigível na V1 quando a matriz de escopo o marcar como `V1 mínima`.
+5. As fontes em `levantamento-de-requisitos/fontes-canonicas/` são evidências preservadas; não são
+   uma segunda autoridade vigente.
+
+### 2.1 V1 mínima — incluído
+
+- fundação Laravel/PostgreSQL, primeiro contrato HTTP e cliente TypeScript;
+- perfis mínimos Administrador/STC e Respondente, com isolamento contextual pelo pedido da UG,
+  sem definir vínculo permanente pessoa–UG;
+- catálogo mínimo para o pedido contextual de uma UG, com objeto variável e objeto fixo com XLSX
+  oficial; isso descreve o cenário de entrega e não fixa cardinalidade permanente;
+- criação, publicação e link contextual de coleta/pedido;
+- identificação mínima do respondente no pedido da sua UG;
+- resposta variável com upload obrigatório e resposta fixa com XLSX oficial;
+- envio, persistência mínima, consulta e download da resposta pela STC;
+- remoção de dados demonstrativos e correção de defeitos bloqueantes nos dois caminhos.
+
+### 2.2 MVP completo — catálogo de capacidades
+
+Os itens abaixo pertencem ao catálogo, mas seu status de planejamento continua sendo o da aba
+**Lista completa** e da [matriz de rastreabilidade](funcionalidades/rastreabilidade-backlog.md).
+Itens **A definir** não são contrato executável nem acréscimo à V1.
 
 - criação e publicação automática de ciclo para um objeto;
 - objeto fixo ou variável;
@@ -36,7 +60,10 @@ histórico.
 - extrato macro filtrado para pessoa autorizada da STC, com formato final ainda pendente.
 - painel de leitura do Gabinete sobre todos os ciclos, com download de respostas e histórico.
 
-### 2.2 Excluído desta especificação de MVP
+Essas capacidades permanecem no produto apenas conforme seu status na matriz abaixo e na aba
+**Lista completa**. Sua presença nesta seção não as promove à V1 mínima.
+
+### 2.3 Excluído do MVP atual ou futuro
 
 - edição do Tesauro externo;
 - integração automática com SEI;
@@ -47,11 +74,23 @@ histórico.
 - regras definitivas de sigilo;
 - comportamento definitivo de envio atrasado;
 - reextração automática do catálogo após nova versão do Tesauro.
-- integração automática, abertura ou preenchimento do SEI;
 - exportação de arquivos, conteúdo de respostas, nomes de respondentes ou logs individuais no
   extrato macro da STC; essa restrição não reduz o download integral confirmado para o Gabinete.
 
 ## 3. Requisitos funcionais
+
+### 3.0 Matriz de escopo dos IDs preservados
+
+| Status | IDs e leitura obrigatória |
+| --- | --- |
+| **V1 mínima** | RF-010 e RF-100 somente como identificação e link contextual mínimos, associados ao pedido publicado da UG e sem resolver o vínculo definitivo pessoa–UG; RF-081 somente como publicação sem duplicidade; RF-091, RF-092, RF-093, RF-020 e RF-061 somente no recorte mínimo do pedido contextual e checagem mínima; RNF-001, RNF-005, RNF-007 e RNF-008; RN-006 e RN-023; CA-003, CA-013 e CA-016 somente nos limites desta V1. |
+| **MVP completo — planejado ou A definir** | Todos os demais RF, RNF, RN e CA não marcados como superados, pendentes ou futuros. Eles permanecem no catálogo da aba **Lista completa**, sem data de entrega implícita. |
+| **Pendente** | RF-029; RNF-002, RNF-009, RNF-010, RNF-011 e RNF-012; RN-019, RN-020; CA-015; e qualquer requisito dependente de identidade pessoa–UG, segurança, retenção, infraestrutura, SEI, prazo ou formato final de extrato. |
+| **Futuro** | IA, OCR, ranking, integração automática com SEI, unificação de planilhas, correlação automática anexo↔linha, regras definitivas de sigilo, obras especializadas e reextração automática do Tesauro. |
+| **Superado** | Os IDs enumerados em [Histórico de requisitos superados](#7-histórico-de-requisitos-superados) não definem comportamento. |
+
+Quando uma linha estiver em mais de uma situação, prevalece a mais restritiva: `superado` >
+`pendente` > `MVP completo` > `V1 mínima`.
 
 ### 3.1 Catálogo, ciclo e publicação
 
@@ -140,10 +179,9 @@ O objeto variável deve ser composto por campos preenchidos diretamente no siste
 upload ou ambos. Não deve oferecer download ou envio de planilha de preenchimento.
 
 **RF-093 — Exigir conteúdo mínimo no objeto variável**
-Quando a configuração exigir a planilha oficial como item principal, a contribuição deve conter
-essa planilha e os anexos complementares são opcionais. Quando a planilha oficial não for
-obrigatória, a contribuição deve conter ao menos um upload, inclusive uma planilha complementar.
-Campo direto sozinho não conclui o envio.
+Objeto variável nunca usa planilha oficial de preenchimento. Quando for publicado para resposta,
+a contribuição deve conter ao menos um upload publicado; campos diretos podem complementar a
+resposta, mas não concluem o envio isoladamente.
 
 ### 3.2 UGs, adjuntas e participantes
 
@@ -349,7 +387,7 @@ O focal deve acompanhar adjuntas, respondentes, desfechos e prazo institucional.
 
 **RF-031 — Auditar ações relevantes**
 Criação, publicação, registro de número SEI, reiteração, acesso, envio, correção, não ocorrência,
-edição, prorrogação, redirecionamento, exclusão e validação devem gerar eventos.
+edição, prorrogação, exclusão e validação devem gerar eventos.
 
 **RF-039 — Exportar comprovantes e dados autorizados**
 Perfis autorizados devem obter comprovantes dos eventos e arquivos vigentes. O Gabinete pode baixar

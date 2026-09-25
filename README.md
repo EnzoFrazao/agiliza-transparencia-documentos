@@ -19,8 +19,8 @@ permanecem em `STC/agiliza-transparencia`.
 
 - [Contexto](governanca/contexto.md)
 - [Regras de negócio](governanca/regras-de-negocio.md)
-- [Fluxogramas](governanca/fluxogramas.md)
-- [Funcionalidades](governanca/funcionalidades.md)
+- [Fluxogramas](governanca/fluxogramas/README.md)
+- [Funcionalidades](governanca/funcionalidades/README.md)
 - [Perfis e permissões](governanca/perfis-e-permissoes.md)
 - [Decisões de reunião](governanca/decisoes-de-reunioes/)
 - [Backlog completo](planejamento/backlog-completo.xlsx)

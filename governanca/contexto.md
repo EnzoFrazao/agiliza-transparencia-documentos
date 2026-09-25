@@ -685,7 +685,10 @@ medicoes     (id, contrato_id, numero, valor, os_ref, sei_ref, status_obra['anda
 
 ## 24. REQUISITOS FUNCIONAIS
 
-> **Fonte canônica dos requisitos:** os documentos vigentes de [regras de negócio](regras-de-negocio.md) e [funcionalidades](funcionalidades.md) (e o `SRS_Agiliza_Transparencia_v2`, RF-001 a RF-040). **Atualização v8.0:** esses documentos serão **revistos** para refletir as decisões das reuniões; os **IDs exatos** (RF/etapas) serão **realinhados** então. Abaixo, o mapa de etapas fica como referência, com as ressalvas da v8.0.
+> **Fonte vigente de requisitos:** [regras de negócio](regras-de-negocio.md) e o índice de
+> [funcionalidades](funcionalidades/README.md), ambos relacionados ao backlog ativo. O
+> `SRS_Agiliza_Transparencia_v2` e os mapas de etapas abaixo são evidências históricas e não
+> definem o recorte da V1 mínima.
 
 - ~~**Etapa 0 · Edição do Tesauro**~~ — **removida na v8.0** (Tesauro é fonte externa, sem edição na plataforma). RF-001/RF-002 saem do escopo.
 - **Etapa 1 · Criação do ciclo:** RF-003, RF-004, RF-005
@@ -1069,6 +1072,7 @@ Esta seção substitui formulações incompatíveis das seções anteriores.
 
 ### 35.5. Autoridade
 
-A redação normativa detalhada está na versão 7.0 do levantamento. Os fluxos vigentes estão na
-versão 8.0 de `fluxogramas.md`, e somente P-012/P-039, P-050, P-060 e B-002 permanecem no arquivo de
-decisões abertas.
+A redação normativa detalhada está na versão 8.1 de
+[`regras-de-negocio.md`](regras-de-negocio.md). Os fluxos vigentes estão no índice
+[`fluxogramas/README.md`](fluxogramas/README.md); somente P-012/P-039, P-050, P-060 e B-002
+permanecem no arquivo de decisões abertas.

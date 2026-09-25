@@ -127,7 +127,6 @@ Esta decisão deve ser refletida em:
 - `contexto.md`;
 - `regras-de-negocio.md`;
 - `perfis-e-permissoes.md`;
-- `funcionalidades.md`;
-- `fluxogramas.md`;
-- `contexto.md`;
+- `funcionalidades/README.md`;
+- `fluxogramas/README.md`;
 - `README.md`.

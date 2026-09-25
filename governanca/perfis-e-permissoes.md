@@ -1,6 +1,17 @@
-# Perfis, fluxos, telas e estados da V1
+# Perfis, fluxos, telas e estados — catálogo do produto
 
-## Perfis vigentes
+Este documento apresenta capacidades do produto completo. O recorte executável da V1 mínima é
+definido pelas Sprints 9–14 do backlog ativo e pelos documentos em
+[`funcionalidades/`](funcionalidades/README.md).
+
+## Escopo
+
+| Recorte | Perfis e capacidades |
+| --- | --- |
+| **V1 mínima** | Administrador/STC e Respondente no pedido contextual; identificação mínima, objeto fixo ou variável, upload/XLSX, envio, consulta e download pela STC. |
+| **MVP completo — A definir** | Ponto focal, Gabinete, registro e comunicação manual pelo SEI, prazo, prorrogação, validação humana, correção, auditoria, Histórico e encerramento. Essas capacidades não integram a V1 mínima. |
+
+## Perfis do catálogo
 
 ### Servidor STC
 
@@ -15,7 +26,7 @@
 
 Não existem perfis internos separados de Analista e Especialista no contrato vigente.
 
-### Ponto focal
+### Ponto focal — MVP completo, A definir
 
 - com toggle ligado, coordena a UG: **convida** adjuntas e respondentes por e-mail — quem recebe
   se autocadastra (D-08) —, confere contribuições, encaminha **prorrogação** e conclui o conjunto
@@ -36,9 +47,9 @@ Não existem perfis internos separados de Analista e Especialista no contrato vi
 - corrige somente sua contribuição e pode declarar ausência total no modo direto;
 - confirma as não ocorrências detectadas automaticamente antes do envio parcial.
 
-### Gabinete
+### Gabinete — MVP completo, A definir
 
-**Perfil de V1 desde 2026-09-02 (D-03), em leitura apenas.**
+**Perfil de leitura do MVP completo; não integra a V1 mínima.**
 
 - acessa **todos os ciclos**, em andamento e encerrados, e as respostas;
 - **baixa as respostas de qualquer UG** e **extrai o histórico**;
@@ -46,10 +57,14 @@ Não existem perfis internos separados de Analista e Especialista no contrato vi
   coletas não respondidas;
 - **não altera nada:** não valida, não devolve, não edita, não registra SEI, não cria ciclo.
 
-As telas existem desde 2026-09-03. Alcance e download foram confirmados em 05/09; retenção, LGPD,
-descarte e tempo de disponibilidade (`P-012/P-039`) continuam bloqueando dados reais.
+As telas existem desde 2026-09-03 no snapshot. Alcance e download foram confirmados em 05/09;
+retenção, LGPD, descarte e tempo de disponibilidade (`P-012/P-039`) continuam bloqueando dados
+reais.
 
-## Fluxo resumido do ciclo
+## Fluxo resumido do ciclo — MVP completo
+
+As etapas de SEI, prazo, prorrogação, validação e encerramento abaixo permanecem **A definir** e
+não ampliam a V1 mínima.
 
 1. A STC escolhe um objeto fixo ou variável.
 2. Configura o ciclo e os toggles focais por UG.
@@ -61,7 +76,10 @@ descarte e tempo de disponibilidade (`P-012/P-039`) continuam bloqueando dados r
 7. A STC monitora, decide solicitações, corrige e valida contribuições.
 8. O ciclo é encerrado manualmente; validação fecha cada resposta.
 
-## Fluxo resumido da coleta
+## Fluxo resumido da coleta — MVP completo
+
+Coordenação focal, ausência total, não ocorrência parcial, correção, validação e auditoria são
+capacidades do MVP completo ainda fora da V1 mínima.
 
 1. O toggle define se o caminho é direto ou coordenado pelo focal.
 2. Respondentes recebem contribuições separadas por adjunta.

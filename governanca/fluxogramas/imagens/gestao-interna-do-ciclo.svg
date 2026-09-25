@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2920" height="780" viewBox="0 0 2920 780" role="img" aria-labelledby="title desc">
+  <title id="title">Gestão interna do ciclo</title>
+  <desc id="desc">Fluxo da demanda institucional à publicação, comunicação manual pelo SEI, coleta e acompanhamento pela STC.</desc>
+  <style>
+    text { font-family: Arial, sans-serif; fill: #28253D; font-size: 16px; text-anchor: middle; }
+    .cluster { fill: #fff; stroke: #888780; stroke-width: 2; rx: 12; }
+    .cluster-label { font-size: 18px; font-weight: bold; }
+    .node { stroke-width: 2; rx: 10; }
+    .fonte { fill: #EEEDFE; stroke: #7F77DD; }
+    .stc { fill: #E6F1FB; stroke: #185FA5; }
+    .canal { fill: #FAEEDA; stroke: #BA7517; }
+    .decision { fill: #FBE9E7; stroke: #C0392B; stroke-width: 2; }
+    .edge { fill: none; stroke: #28253D; stroke-width: 2.2; marker-end: url(#arrow); }
+    .edge-label { font-size: 14px; fill: #633806; }
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#28253D"/></marker>
+  </defs>
+
+  <rect class="cluster" x="30" y="70" width="330" height="470"/>
+  <text class="cluster-label" x="195" y="105">Origem da demanda</text>
+  <rect class="cluster" x="390" y="70" width="570" height="470"/>
+  <text class="cluster-label" x="675" y="105">STC — preparação e publicação</text>
+  <rect class="cluster" x="990" y="70" width="570" height="470"/>
+  <text class="cluster-label" x="1275" y="105">Comunicação institucional — operação manual</text>
+  <rect class="cluster" x="1590" y="70" width="1300" height="680"/>
+  <text class="cluster-label" x="2240" y="105">STC — acompanhamento e decisão</text>
+
+  <path class="edge" d="M195 270 V340"/>
+  <path class="edge" d="M310 400 H470"/>
+  <path class="edge" d="M630 400 H660"/>
+  <path class="edge" d="M820 400 H850"/>
+  <path class="edge" d="M960 400 H1070"/>
+  <path class="edge" d="M1230 400 H1260"/>
+  <path class="edge" d="M1420 400 H1450"/>
+  <path class="edge" d="M1560 400 H1670"/>
+  <path class="edge" d="M1830 400 H1860"/>
+  <path class="edge" d="M2020 400 H2050"/>
+  <path class="edge" d="M2210 400 C2250 400 2250 250 2290 250"/>
+  <path class="edge" d="M2210 400 C2250 400 2250 550 2290 550"/>
+  <path class="edge" d="M2450 250 C2480 250 2480 170 1300 170 V340"/>
+  <path class="edge" d="M2450 550 H2480"/>
+  <path class="edge" d="M2640 550 H2670"/>
+  <path class="edge" d="M2290 550 C2160 700 1940 700 1940 460"/>
+  <text class="edge-label" x="2240" y="315">sim</text>
+  <text class="edge-label" x="2240" y="490">não</text>
+  <text class="edge-label" x="2470" y="205">sim</text>
+  <text class="edge-label" x="2220" y="685">não</text>
+
+  <g id="O1"><rect class="node fonte" x="80" y="160" width="230" height="110"/><text x="195" y="200"><tspan x="195">Necessidade institucional,</tspan><tspan x="195" dy="22">mapeamento ou solicitação manual</tspan></text></g>
+  <g id="O2"><rect class="node fonte" x="80" y="340" width="230" height="120"/><text x="195" y="385"><tspan x="195">STC registra e qualifica</tspan><tspan x="195" dy="22">a demanda para preparar</tspan><tspan x="195" dy="22">um ciclo</tspan></text></g>
+
+  <g id="P1"><rect class="node stc" x="470" y="340" width="160" height="120"/><text x="550" y="380"><tspan x="550">Seleciona objeto, UGs</tspan><tspan x="550" dy="22">e configuração aplicável</tspan><tspan x="550" dy="22">ao ciclo</tspan></text></g>
+  <g id="P2"><rect class="node stc" x="660" y="340" width="160" height="120"/><text x="740" y="390"><tspan x="740">Prepara o ciclo e o</tspan><tspan x="740" dy="22">pedido de coleta</tspan></text></g>
+  <g id="P5"><rect class="node stc" x="850" y="340" width="110" height="120"/><text x="905" y="375"><tspan x="905">Publica o ciclo;</tspan><tspan x="905" dy="22">congela o escopo</tspan><tspan x="905" dy="22">e disponibiliza</tspan><tspan x="905" dy="22">link/texto</tspan></text></g>
+
+  <g id="E1"><rect class="node canal" x="1070" y="340" width="160" height="120"/><text x="1150" y="380"><tspan x="1150">Servidor STC copia</tspan><tspan x="1150" dy="22">link e texto do</tspan><tspan x="1150" dy="22">Agiliza</tspan></text></g>
+  <g id="E2"><rect class="node canal" x="1260" y="340" width="160" height="120"/><text x="1340" y="380"><tspan x="1340">SEI formaliza e</tspan><tspan x="1340" dy="22">distribui a comunicação</tspan><tspan x="1340" dy="22">à UG</tspan></text></g>
+  <g id="E3"><rect class="node canal" x="1450" y="340" width="110" height="120"/><text x="1505" y="375"><tspan x="1505">UG recebe a</tspan><tspan x="1505" dy="22">comunicação e</tspan><tspan x="1505" dy="22">acessa o Agiliza</tspan><tspan x="1505" dy="22">pelo link</tspan></text></g>
+
+  <g id="M1"><rect class="node stc" x="1670" y="340" width="160" height="120"/><text x="1750" y="385"><tspan x="1750">Coleta e validação</tspan><tspan x="1750" dy="22">no Agiliza</tspan><tspan x="1750" dy="22">(ver fluxo de coleta MVP)</tspan></text></g>
+  <g id="A1"><rect class="node stc" x="1860" y="340" width="160" height="120"/><text x="1940" y="375"><tspan x="1940">Acompanha respostas,</tspan><tspan x="1940" dy="22">ausências e pendências</tspan><tspan x="1940" dy="22">no Agiliza</tspan></text></g>
+  <g id="A2"><polygon class="decision" points="2130,320 2210,400 2130,480 2050,400"/><text x="2130" y="380"><tspan x="2130">Prazo, reiteração ou</tspan><tspan x="2130" dy="22">prorrogação exigem</tspan><tspan x="2130" dy="22">providência?</tspan></text></g>
+  <g id="A3"><rect class="node stc" x="2290" y="190" width="160" height="120"/><text x="2370" y="225"><tspan x="2370">Registra número SEI,</tspan><tspan x="2370" dy="22">decide prorrogação</tspan><tspan x="2370" dy="22">ou reitera comunicação</tspan></text></g>
+  <g id="A4"><polygon class="decision" points="2370,470 2450,550 2370,630 2290,550"/><text x="2370" y="545"><tspan x="2370">Encerrar o ciclo?</tspan></text></g>
+  <g id="A5"><rect class="node stc" x="2480" y="490" width="160" height="120"/><text x="2560" y="530"><tspan x="2560">Registra encerramento</tspan><tspan x="2560" dy="22">manual e relatório</tspan><tspan x="2560" dy="22">institucional</tspan></text></g>
+  <g id="A6"><rect class="node stc" x="2670" y="490" width="160" height="120"/><text x="2750" y="530"><tspan x="2750">Se necessário, registra</tspan><tspan x="2750" dy="22">manualmente o desfecho</tspan><tspan x="2750" dy="22">no SEI</tspan></text></g>
+</svg>
