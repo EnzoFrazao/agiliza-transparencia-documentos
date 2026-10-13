@@ -1,7 +1,15 @@
 # Handoff técnico do backend — V1 mínima
 
-**Status:** referência de implementação para a V1; não é contrato HTTP, OpenAPI, esquema de banco
-ou autenticação já aprovados.
+**Status:** referência de implementação para a V1; não substitui contrato HTTP, OpenAPI, esquema
+de banco ou autenticação institucional aprovados. No snapshot de 2026-10-12, o repositório canônico
+privado
+[`Oxygeni-Projetos-Estagiarios/agiliza-stc`](https://github.com/Oxygeni-Projetos-Estagiarios/agiliza-stc)
+mantém a fundação em `main` (`ecb6c05`) e a implementação HTTP V1 em
+`origin/fluxos-http-v1` (`0d2d832`), nove commits à frente de `origin/main`. O código usa Laravel
+13, Inertia React, PHP, React 19, TypeScript, Vite e Tailwind. PostgreSQL, migrations, rotas
+`/api/v1` e telas `/v1` foram exercitados; o build da imagem `app` do Compose ainda falha e a
+branch ainda não foi integrada em `main`. O DBeaver fica restrito à inspeção do banco, e nenhuma
+versão será enviada ao GitLab ou ao ambiente da STC antes de a solução estar completa e pronta.
 
 ## Escopo e autoridade
 

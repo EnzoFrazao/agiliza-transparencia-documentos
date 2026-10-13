@@ -6,8 +6,9 @@ correspondente.
 
 ## Escopo
 
-A aplicação está em `STC/agiliza-transparencia/`. A documentação institucional vigente fica nesta
-raiz `STC/documentos/`; não há repositórios separados de frontend e backend para reportar.
+A aplicação canônica está em `STC/agiliza-stc/`. O protótipo legado permanece isolado em
+`STC/agiliza-transparencia/` e não é a fonte da V1 HTTP. A documentação institucional vigente fica
+nesta raiz `STC/documentos/`; não há repositórios separados de frontend e backend para reportar.
 
 ## Saída padrão
 
@@ -21,3 +22,10 @@ Relatórios sob demanda devem ser salvos nesta própria pasta com o padrão
 - Preservado em governanca/decisoes-de-reunioes/ o documento original de resposta à minuta e roadmap de versões, datado de 2026-08-24; ele permanece histórico e não substitui decisões vigentes.
 - Descartada a quarentena de organização de 2026-09-10 e os artefatos locais .superpowers, conforme a política de preservação por conteúdo atualizado.
 - Recalculados os SHA-256 do inventário para refletir os arquivos físicos atuais, inclusive textos normalizados durante a organização.
+
+## 2026-10-12 — Reconciliação do backlog V1
+
+- Atualizada a planilha operacional `planejamento/backlog-completo.xlsx` sem substituir o planejamento: as abas receberam a separação entre status técnico e integração/evidência.
+- Registrada a evidência da V1 HTTP em `origin/fluxos-http-v1` (`0d2d832`), nove commits à frente de `origin/main` e sem commits atrás; a integração em `main` não foi realizada.
+- Registrados como em andamento a fundação operacional do container (falha de `npm ci` no build da imagem `app`), a retirada de dados demonstrativos, UAT e homologação.
+- Mantido o protótipo legado isolado e sem alegar homologação institucional.

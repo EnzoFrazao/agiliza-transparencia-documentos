@@ -5,21 +5,22 @@ Este inventário registra todos os arquivos preservados após a curadoria de 202
 
 | Local | Natureza | Origem | SHA-256 |
 | --- | --- | --- | --- |
-| `governanca/contexto.md` | Vigente | Consolidado institucional | `5B8A05344A75E0A3E39C68E3433D95F7E734FB2D347C0F949117CEE4EA7DED71` |
+| `governanca/contexto.md` | Vigente | Consolidado institucional | `F5A8FDD32B5FC7CCCAD6028C268A5764B2FD7D06AFA12CC889E2599210FEC5C2` |
+| `governanca/arquitetura/2026-10-05-der-v1-minima.md` | Vigente | DER V1 mínima e acesso contextual | `669A58598C2AAA6B3E089456B76D18E3694895EB8422EB22EDA89AEA3B879C10` |
 | `governanca/decisoes-de-reunioes/2026-08-31-reuniao-apresentacao-agiliza.md` | Vigente | Consolidado institucional | `B7891E9CE65B2114D2D330B956DDBE081045EF860D373445069A67DE92B02597` |
 | `governanca/fluxogramas/README.md` | Vigente | Índice dos fluxos consolidados | `4BDC52E7C3CB65C17F1C92955EB933C9B94749523E8813B99A84B0F86CE8C53D` |
 | `governanca/fluxogramas/v1-minima-coleta-e-resposta.md` | Vigente | Fluxo V1 mínima | `FA9CC039921C0866D52208A036B7B68597D8C85C6CE51A0B766936D6249AE703` |
-| `governanca/fluxogramas/backend-v1-handoff.md` | Vigente | Handoff técnico do backend para a V1 | `DCDB352D3962F5AA9CE5A5C3C739C2CD83F29935B00594657197D51F14C35534` |
+| `governanca/fluxogramas/backend-v1-handoff.md` | Vigente | Handoff técnico do backend para a V1 | `EF6DF7DCA7BC6B7514788D473F66289E835D8EEB62612F5C1BD32A6A15572EAA` |
 | `governanca/fluxogramas/mvp-completo-coleta-e-validacao.md` | Vigente | Fluxo MVP completo | `22DA2210AC259181081EFDB6124D95D4DFE7BCE97EB0410EE414A3E0AA9A0072` |
 | `governanca/fluxogramas/gestao-interna-do-ciclo.md` | Vigente | Fluxo de gestão interna do ciclo | `C9FEDD9F7C3661C4B62B4480013E0D71D05433DA5260D0EC790FEC0DC268226F` |
 | `governanca/fluxogramas/imagens/v1-minima-coleta-e-resposta.svg` | Vigente | Exportação do fluxo V1 | `B4A3D4DD4B4233422C99B4C734BF21FB7B443A1E03E627D0DFF888070424EFC1` |
 | `governanca/fluxogramas/imagens/backend-v1-handoff.svg` | Vigente | Exportação do handoff técnico V1 | `5C961A7340BF6BD086DD11AD32A5A3DCCDDB971D42BAA81A2ABA0A0FB16B93ED` |
 | `governanca/fluxogramas/imagens/mvp-completo-coleta-e-validacao.svg` | Vigente | Exportação do fluxo MVP | `31D5376787D98F142DDFCB1F83F4F611C4875BE6CAAEC792E2E794D530F0859E` |
 | `governanca/fluxogramas/imagens/gestao-interna-do-ciclo.svg` | Vigente | Exportação da gestão interna do ciclo | `6FD5158CD9474520161B1D2EA2D27BFA8A3DA0B21EB27DA3DC5B8880BDDE6418` |
-| `governanca/funcionalidades/README.md` | Vigente | Índice das funcionalidades | `048AB13BF45419ECFD5D7060DA851B493442A4EF833DE6F0BC6AD4EDCE1AC73E` |
+| `governanca/funcionalidades/README.md` | Vigente | Índice das funcionalidades | `E15D6DE8CB411316AF2BC557D53D87882057E8F641EA090DA3C472E73195D744` |
 | `governanca/funcionalidades/mvp-completo.md` | Vigente | Catálogo do MVP completo | `85731F283C7F62F78E3915D5F9DA52647462104AFA869A38EC80248A01BDE0BA` |
-| `governanca/funcionalidades/v1-minima.md` | Vigente | Corte V1 mínima | `22BF80D9C4BC6B78C9F484261581A11E6437C08485F42D62F6B8CE3D481DD2FE` |
-| `governanca/funcionalidades/rastreabilidade-backlog.md` | Vigente | Matriz de rastreabilidade | `953B5CD55677C358BA9EA1BF9D1BB3EE759EA25BF4C1990B590BE2EF1C37DFFC` |
+| `governanca/funcionalidades/v1-minima.md` | Vigente | Corte V1 mínima | `477918E9011FDDA4F0481056CC50C28672903E1FAC4A0B733F758F345AE8B4FC` |
+| `governanca/funcionalidades/rastreabilidade-backlog.md` | Vigente | Matriz de rastreabilidade | `0959CC0807000EA32AB33F10F0DC369B87A3E12F77607D6B5D9D7D6F9848A422` |
 | `governanca/mapeamentos/Mapeamento_preliminar_Objetos_Fontes_UGs_ate_Emendas.xlsx` | Vigente | Consolidado institucional | `6491F25580E5A296481211CDC430BC56B1147272B6EAC1E0F27E670066A2655B` |
 | `governanca/perfis-e-permissoes.md` | Vigente | Consolidado institucional | `A22114B1860250FC2558B8CBA798BFD76506FC4F890FD60C9D701FEF9BC2061D` |
 | `governanca/regras-de-negocio.md` | Vigente | Consolidado institucional | `6FC9E8A4FF3D015AAC0D99A792E2756D050EE1E9C7F35A8BDD5E56A25391FE49` |
@@ -58,8 +59,8 @@ Este inventário registra todos os arquivos preservados após a curadoria de 202
 | `levantamento-de-requisitos/fontes-canonicas/requisitos-originais/lista_de_funcionalidades_tecnicas.md` | Fonte | Levantamento original | `82FF518EBDFDC91E5222B8F416BB9C29AC00E64F9EEB68544EFA4027CD4CC087` |
 | `levantamento-de-requisitos/fontes-canonicas/requisitos-originais/pontos_em_aberto.md` | Fonte | Levantamento original | `AE9DDCF02F482EE991B0BDD0AC46E922FCB2844C94A4BC34E19A67658E157666` |
 | `levantamento-de-requisitos/fontes-canonicas/requisitos-originais/README.md` | Índice | Orientação de precedência e preservação | `FEDB61E5E9826E0CB272DBA695D7824797F313A48445F1683A9741BF619E5491` |
-| `planejamento/backlog-completo.xlsx` | Vigente | Backlog operacional | `B01BC8E0644F6D006F02188D7BF38D4C231F98AAE5E7C357B1B78BA901AD51F3` |
-| `relatorios/documentacao-projeto/relatorio-de-mudancas.md` | Acompanhamento | Biblioteca STC | `561CDDD766739AA3E527AF313F643F3935CC79514C667FA16A772F1B4C1244DC` |
+| `planejamento/backlog-completo.xlsx` | Vigente | Backlog operacional | `C08F2694FE04C6454BDF09044BF009A11AC19606C26F10069FF2304A495D98B5` |
+| `relatorios/documentacao-projeto/relatorio-de-mudancas.md` | Acompanhamento | Biblioteca STC | `20214017E3C4B22A03D3C457DB38946C130299561AC2EF55D9B5F2E1401363CD` |
 | `relatorios/FAPEMA/modelos/atividades-extras.xlsx` | Relatório FAPEMA | Acervo FAPEMA | `90F7B243FB6C62DAF551F6466C875073EA4F89E17839ECC40896C4718EE16CF3` |
 | `relatorios/FAPEMA/modelos/modelo de relatorio quinzenal - responsavel.docx` | Relatório FAPEMA | Acervo FAPEMA | `3A0F5C020A61C09AFE1465DF43DDB59143F739CC64D0633A2E597CEBE5355833` |
 | `relatorios/FAPEMA/quinzenais/relatorio1.pdf` | Relatório FAPEMA | Acervo FAPEMA | `2AF0E7CADCC761362ED9B62C7A08674035A52493A7C6347092887146143D51DF` |

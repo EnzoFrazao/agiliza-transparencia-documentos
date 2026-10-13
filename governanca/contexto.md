@@ -14,6 +14,17 @@
 >
 > **Status da fase:** entrevistas da 1ª rodada **encerradas** (STC: 4; UGs: 5, em 4 órgãos); **DETRAN e PM** ouvidos na sequência (UGs novas). Restam órgãos e a **TI da ouvidoria**, ouvidos **durante o desenvolvimento**. **O protótipo visual do MVP 1.0 está construído** (front-end only, React/TS, auditado e publicado). A fase agora é **validar o MVP/requisitos com a STC e refinar o protótipo**, antes de construir o MVP com backend. O **estado detalhado do protótipo** fica em `andamento_do_prototipo.md` (documento à parte, para não misturar status de implementação com as decisões de produto).
 
+> **Encaminhamento técnico (snapshot 2026-10-12):** o repositório canônico privado
+> [`Oxygeni-Projetos-Estagiarios/agiliza-stc`](https://github.com/Oxygeni-Projetos-Estagiarios/agiliza-stc)
+> mantém a fundação Laravel/Inertia em `main` (`ecb6c05`) e a V1 HTTP em
+> `origin/fluxos-http-v1` (`0d2d832`), nove commits à frente de `origin/main`. A branch contém
+> domínio persistente, PostgreSQL validado por migrations, API, cliente TypeScript e telas `/v1`
+> para coleta fixa e variável. Sua integração em `main` permanece pendente. O build da imagem
+> `app` do Compose ainda falha, e homologação, UAT e retirada de dados demo seguem abertos. O schema
+> continua evoluindo exclusivamente por migrations; não haverá envio ao GitLab ou ao ambiente da
+> STC antes de a solução estar completa e pronta. Ver a
+> [decisão de 01/10](decisoes-de-reunioes/2026-10-01-fundacao-tecnica-e-composicao-da-equipe.md).
+
 Você está assumindo o desenvolvimento de um projeto real, já iniciado, vinculado à **Secretaria de Transparência e Controle do Estado do Maranhão (STC/MA)**. Existe protótipo visual, documentação, reuniões e entrevistas realizadas e decisões que não devem ser revertidas. Leia tudo com atenção antes de ajudar.
 
 -----
@@ -204,7 +215,7 @@ A STC fiscaliza e garante a transparência no uso dos recursos públicos estadua
 |---|---|
 |**STC / SEATRAN**|Regras de negócio, homologação e diretrizes de infraestrutura. Apresenta demandas, indica mentor técnico (até 2 sessões mensais de 2h) e ponto focal técnico (2h semanais), disponibiliza dados anonimizados quando necessário, valida requisitos/prioridades, dá feedback e apoia validação/testes/piloto. A escolha do projeto a desenvolver é da STC.|
 |**Hub de Inovação (Oxygeni Hub — Universidade CEUMA)**|Mentoria técnica, suporte na stack e qualidade do código. Seleciona estudantes, coordena trilhas, designa mentores, disponibiliza espaço/infra/ferramentas, promove sprints, acompanha técnica e pedagogicamente, elabora relatórios e emite certificação.|
-|**Bolsistas (Enzo + Ariel)**|Execução, codificação, integração com o TemaTres e desenvolvimento. Contratação via **FAPEMA**. (A administração central, via **SEGEP**, não tem registro de que os bolsistas atuam na STC — exemplo concreto da ausência de gestão centralizada de informação no Estado.)|
+|**Bolsistas (Enzo + Clarice)**|Execução, codificação, integração com o TemaTres e desenvolvimento. Contratação via **FAPEMA**. (A administração central, via **SEGEP**, não tem registro de que os bolsistas atuam na STC — exemplo concreto da ausência de gestão centralizada de informação no Estado.)|
 
 ### Interlocutores atuais na STC *(atualizado)*
 - **Thiago** — auditor-chefe / engenheiro da auditoria; **substituiu o Fernando** (que foi **transferido de área**). **STR = Talita + Thiago + Alessandra** — a **mesma pessoa** da gestão da informação/Tesauro.

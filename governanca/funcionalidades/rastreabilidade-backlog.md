@@ -4,12 +4,20 @@ Esta matriz preserva o nome de cada atividade da aba **Lista completa**. Quando 
 recorte nas Sprints 9–14, a terceira coluna aponta a atividade granular correspondente; quando não
 possui, mantém **A definir**. Os nós remetem aos três fluxos vigentes.
 
+## Situação técnica em 2026-10-12
+
+O planejamento abaixo não é um registro de release. A V1 de acesso contextual, publicação, coleta
+variável/fixa, arquivos, validação estrutural, envio e download está concluída tecnicamente em
+`origin/fluxos-http-v1` (`0d2d832`), nove commits à frente de `origin/main`. A fundação
+Laravel/PostgreSQL foi exercitada, mas o build da imagem `app` do Compose falha. Homologação, UAT e
+retirada de dados demo continuam abertos; a integração da branch em `main` também não ocorreu.
+
 ## Resumo por capacidade
 
 | Capacidade | Planejamento | Fluxo dominante |
 | --- | --- | --- |
-| Fundação, transporte, acesso e isolamento | Sprints 9–10 | V1 — pré-requisitos |
-| Publicação e coleta variável/fixa | Sprints 11–14 | V1 e coleta MVP |
+| Fundação, transporte, acesso e isolamento | Sprints 9–10; fundação em andamento, acesso concluído tecnicamente | V1 — pré-requisitos |
+| Publicação e coleta variável/fixa | Sprints 11–14; concluída tecnicamente na branch V1 | V1 e coleta MVP |
 | Coordenação, validação, histórico e operação | A definir | Coleta MVP e gestão interna |
 | Qualidade, piloto e homologação | A definir, com correção bloqueante na Sprint 14 | Transversal |
 

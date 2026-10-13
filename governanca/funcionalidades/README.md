@@ -14,6 +14,9 @@ o recorte executável da V1 mínima.
 ## Convenções
 
 - **V1 mínima:** item com atividade granular nas Sprints 9–14.
+- **Status técnico / Integração-evidência:** leitura operacional no backlog ativo; separa a
+  implementação comprovada da integração em `main` ou da ausência de início. Não altera o
+  planejamento original da Sprint.
 - **Planejado:** item já associado a uma ou mais Sprints na aba geral.
 - **A definir:** item listado no MVP completo sem Sprint definida.
 - **Parecer Guilherme:** evidência usada para formar a V1; `não` ou ausência de marcação não

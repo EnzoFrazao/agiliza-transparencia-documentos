@@ -3,6 +3,27 @@
 Este documento lista cada atividade granular planejada para a V1 uma única vez. Os critérios de
 aceite são os registrados nas respectivas abas do backlog ativo.
 
+## Situação observada em 2026-10-12
+
+O repositório canônico privado
+[`Oxygeni-Projetos-Estagiarios/agiliza-stc`](https://github.com/Oxygeni-Projetos-Estagiarios/agiliza-stc)
+mantém a fundação em `main` (`ecb6c05`). A V1 HTTP está implementada e publicada em
+`origin/fluxos-http-v1` (`0d2d832`), com nove commits à frente de `origin/main` e nenhum commit
+atrás. Ela inclui domínio persistente, rotas `/api/v1`, cliente TypeScript e telas `/v1` para os
+percursos fixo e variável. A integração da branch em `main` permanece pendente.
+
+As evidências registradas no repositório canônico incluem 99 testes PHP e 408 asserções em SQLite
+e PostgreSQL isolados, 64 arquivos/685 testes Vitest e dois E2E `/v1`. O PostgreSQL e as migrations
+foram exercitados, mas o build da imagem `app` do Compose ainda falha em `npm ci`; por isso,
+fundação operacional, retirada de dados demo, UAT e homologação não estão concluídos. Fontes
+institucionais, levantamento, atas e demais materiais de `documentos/` continuam fora do código.
+
+| Recorte | Status técnico | Integração |
+| --- | --- | --- |
+| Fundação Laravel/PostgreSQL e container | Em andamento | Base em `main`; build da imagem `app` pendente |
+| Acesso, publicação, coleta e download V1 | Concluído tecnicamente | `origin/fluxos-http-v1` (`0d2d832`) |
+| Homologação, UAT e retirada de demos | Em andamento ou planejado | Sem integração de release |
+
 ## Pré-requisitos técnicos
 
 | Sprint | Atividade | Critério de aceite resumido | Nó ou critério V1 |
