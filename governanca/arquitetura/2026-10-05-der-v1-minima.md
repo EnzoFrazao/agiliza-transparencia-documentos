@@ -20,13 +20,12 @@ na versão publicada. O MT-0018 já possui um XLSX piloto derivado do Tesauro e 
 destinatária em carga explícita de desenvolvimento. Esse modelo e mapeamento não são homologados;
 os modelos institucionais e o mapeamento completo dos objetos seguem pendentes de validação pela STC.
 
-## Evidência de implementação em 2026-10-12
+## Evidência de implementação em 2026-10-14
 
-O modelo descrito está implementado em `origin/fluxos-http-v1` (`0d2d832`), nove commits à frente
-de `origin/main`, incluindo publicação, acesso contextual, rascunho, upload, envio e download. A
-branch ainda não foi integrada em `main`. A base PostgreSQL e as migrations foram exercitadas, mas
-o build da imagem `app` do Compose permanece pendente; a carga MT-0018/SINFRA continua somente de
-desenvolvimento e não comprova homologação institucional.
+O modelo descrito está em `main` (`60f25d0`, PR #5 mesclado em 2026-10-14), incluindo publicação,
+acesso contextual, rascunho, upload, envio e download. A base PostgreSQL e as migrations foram
+exercitadas, e o build da imagem `app` do Compose foi verificado nesta data. A carga
+MT-0018/SINFRA continua somente de desenvolvimento e não comprova homologação institucional.
 
 O acesso do respondente é contextual: `target_access_grants` liga uma conta a um destinatário
 publicado. Isto satisfaz o isolamento da V1 sem supor vínculo institucional duradouro pessoa–UG.

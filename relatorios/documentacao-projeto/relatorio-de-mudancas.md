@@ -29,3 +29,9 @@ Relatórios sob demanda devem ser salvos nesta própria pasta com o padrão
 - Registrada a evidência da V1 HTTP em `origin/fluxos-http-v1` (`0d2d832`), nove commits à frente de `origin/main` e sem commits atrás; a integração em `main` não foi realizada.
 - Registrados como em andamento a fundação operacional do container (falha de `npm ci` no build da imagem `app`), a retirada de dados demonstrativos, UAT e homologação.
 - Mantido o protótipo legado isolado e sem alegar homologação institucional.
+
+## 2026-10-14 — Pós-merge do PR #5
+
+- Atualizada a planilha operacional e os documentos vigentes para registrar a integração da V1 HTTP em `main` (`60f25d0`, PR #5 mesclado).
+- Registrado que `docker compose build app` foi verificado; a falha histórica de `npm ci` não se reproduziu.
+- Mantidas como pendentes a retirada de dados demonstrativos, UAT e homologação institucional.

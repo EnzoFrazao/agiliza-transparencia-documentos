@@ -4,13 +4,12 @@ Esta matriz preserva o nome de cada atividade da aba **Lista completa**. Quando 
 recorte nas Sprints 9–14, a terceira coluna aponta a atividade granular correspondente; quando não
 possui, mantém **A definir**. Os nós remetem aos três fluxos vigentes.
 
-## Situação técnica em 2026-10-12
+## Situação técnica em 2026-10-14
 
 O planejamento abaixo não é um registro de release. A V1 de acesso contextual, publicação, coleta
-variável/fixa, arquivos, validação estrutural, envio e download está concluída tecnicamente em
-`origin/fluxos-http-v1` (`0d2d832`), nove commits à frente de `origin/main`. A fundação
-Laravel/PostgreSQL foi exercitada, mas o build da imagem `app` do Compose falha. Homologação, UAT e
-retirada de dados demo continuam abertos; a integração da branch em `main` também não ocorreu.
+variável/fixa, arquivos, validação estrutural, envio e download está em `main` (`60f25d0`, PR #5
+mesclado em 2026-10-14). A fundação Laravel/PostgreSQL foi exercitada e o build da imagem `app` do
+Compose foi verificado. Homologação, UAT e retirada de dados demo continuam abertos.
 
 ## Resumo por capacidade
 
