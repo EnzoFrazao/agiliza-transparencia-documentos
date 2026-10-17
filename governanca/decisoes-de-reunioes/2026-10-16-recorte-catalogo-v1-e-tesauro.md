@@ -25,6 +25,22 @@ já existentes.
 
 ## Limites e continuidade
 
+### Complemento confirmado em 17/10/2026 — arquivos solicitados
+
+- A V1 ainda não possui um catálogo institucional de arquivos extras para selecionar na
+  montagem da coleta. A STC descreve cada arquivo solicitado no próprio pedido, com
+  orientação visível ao respondente. No variável, o primeiro arquivo é obrigatório;
+  os seguintes são adicionais, cada um obrigatório ou opcional conforme o pedido.
+  No fixo, podem ser solicitados arquivos adicionais
+  além do XLSX, inclusive obrigatórios quando o pedido assim definir.
+- Os arquivos enviados podem ter qualquer formato dentro do limite de tamanho do sistema.
+  A recepção registra e protege os bytes, sem afirmar que seu conteúdo foi validado pela STC.
+- A vinculação futura de certos arquivos como requisitos estáveis de objetos fixos e a
+  eventual curadoria de um catálogo de arquivos ficam para depois da V1.
+  O responsável esclareceu que a STC solicita os metadados do Tesauro. Ela descreve no
+  ato o recorte solicitado e a orientação de cada arquivo; não há texto institucional
+  separado a obter. `V1-VARIABLE` permanece exemplo técnico, sem valor de fonte institucional.
+
 - A sincronização Tesauro–Catálogo ainda não foi implementada. Seu gatilho, validações,
   versionamento, auditoria e tratamento de conflitos com edições locais serão definidos na
   atividade pós-V1. Cargas futuras não podem sobrescrever silenciosamente dados operacionais,
@@ -53,7 +69,7 @@ já existentes.
   O manifesto aprovado e a cópia final estão versionados no repositório da aplicação; a carga
   é idempotente e recusa divergências. Os testes a executaram em SQLite isolado. **Nenhuma
   base operacional foi carregada** nesta sessão.
-- O pedido variável é criado no ato e sem código permanente. Seu contrato técnico e os
-  anexos/instruções específicos continuam pendentes na etapa própria da V1; `V1-VARIABLE` é
-  apenas exemplo de desenvolvimento. A homologação integrada em PostgreSQL e Excel/LibreOffice
-  permanece para a etapa 6.
+- O pedido variável é criado no ato e sem código permanente. A etapa 2 implementou
+  orientação geral sobre os metadados do Tesauro e orientação por arquivo, congeladas na
+  publicação; `V1-VARIABLE` é apenas exemplo de desenvolvimento. A homologação integrada em
+  PostgreSQL e Excel/LibreOffice permanece para a etapa 6.
