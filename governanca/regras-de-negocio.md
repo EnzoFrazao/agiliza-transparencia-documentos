@@ -6,6 +6,16 @@
 [`decisoes-de-reunioes/2026-08-31-reuniao-apresentacao-agiliza.md`](decisoes-de-reunioes/2026-08-31-reuniao-apresentacao-agiliza.md)
 e consolidação posterior registrada em [`contexto.md`](contexto.md).
 
+**Recorte V1 confirmado em 16/10/2026:** novas respostas usam somente arquivos; os campos
+do objeto fixo descrevem o XLSX e não inputs do respondente. O variável exige ao menos um
+anexo obrigatório e aceita qualquer formato dentro do limite de tamanho. A V1 carrega
+somente objetos piloto derivados do Tesauro após aprovação; não oferece cadastro livre
+de novos objetos nem sincronização automática. Ver a
+[decisão do Catálogo](decisoes-de-reunioes/2026-10-16-recorte-catalogo-v1-e-tesauro.md)
+e o plano técnico `../../agiliza-stc/specs/changes/2026-10-16-respostas-somente-arquivos-v1.md`.
+Formulações históricas abaixo sobre campos diretos e cadastro de novos objetos ficam
+subordinadas a este recorte na V1.
+
 ## 1. Objetivo
 
 Preservar o contrato histórico do produto e declarar, sem ambiguidade, quais partes pertencem à

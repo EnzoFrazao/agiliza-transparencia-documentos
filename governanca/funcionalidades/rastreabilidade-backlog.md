@@ -1,5 +1,15 @@
 # Rastreabilidade — backlog, fluxo e regras
 
+**Recorte vigente de 16/10/2026:** as linhas de Sprint 11/13 sobre carregar ou cadastrar
+objetos devem ser aceitas na V1 como disponibilidade do MT-0018 fixo e configuração do
+pedido variável no ato, sem código nem cadastro permanente desse objeto. Não há cadastro livre
+de novos objetos pela STC. O responsável aprovou MT-0018/SINFRA (UG 531010) para este
+piloto e autorizou confirmar a aprovação na aba “Orientações” da cópia final do XLSX.
+A carga controlada está preparada, mas não foi executada em base operacional. O Tesauro
+de origem ainda diz “Em validação”; `V1-VARIABLE` e o XLSX do seeder são apenas dados de
+desenvolvimento. Ver a
+[decisão de escopo](../decisoes-de-reunioes/2026-10-16-recorte-catalogo-v1-e-tesauro.md).
+
 Esta matriz preserva o nome de cada atividade da aba **Lista completa**. Quando a atividade possui
 recorte nas Sprints 9–14, a terceira coluna aponta a atividade granular correspondente; quando não
 possui, mantém **A definir**. Os nós remetem aos três fluxos vigentes.
@@ -9,7 +19,8 @@ possui, mantém **A definir**. Os nós remetem aos três fluxos vigentes.
 O planejamento abaixo não é um registro de release. A V1 de acesso contextual, publicação, coleta
 variável/fixa, arquivos, validação estrutural, envio e download está em `main` (`60f25d0`, PR #5
 mesclado em 2026-10-14). A fundação Laravel/PostgreSQL foi exercitada e o build da imagem `app` do
-Compose foi verificado. Homologação, UAT e retirada de dados demo continuam abertos.
+Compose foi verificado. O ajuste de compatibilidade do teste de download com jsdom está no PR #6,
+ainda em revisão. Homologação, UAT e retirada de dados demo continuam abertos.
 
 ## Resumo por capacidade
 
@@ -18,7 +29,7 @@ Compose foi verificado. Homologação, UAT e retirada de dados demo continuam ab
 | Fundação, transporte, acesso e isolamento | Sprints 9–10; fundação em andamento, acesso concluído tecnicamente | V1 — pré-requisitos |
 | Publicação e coleta variável/fixa | Sprints 11–14; concluída tecnicamente na branch V1 | V1 e coleta MVP |
 | Coordenação, validação, histórico e operação | A definir | Coleta MVP e gestão interna |
-| Qualidade, piloto e homologação | A definir, com correção bloqueante na Sprint 14 | Transversal |
+| Qualidade, piloto e homologação | A definir; ajuste do teste jsdom em revisão no PR #6 | Transversal |
 
 ## Matriz granular
 

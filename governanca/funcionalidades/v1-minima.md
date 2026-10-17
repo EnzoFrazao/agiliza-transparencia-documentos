@@ -3,6 +3,22 @@
 Este documento lista cada atividade granular planejada para a V1 uma única vez. Os critérios de
 aceite são os registrados nas respectivas abas do backlog ativo.
 
+**Recorte confirmado em 16/10/2026:** a V1 carrega somente os objetos fixos do piloto derivados
+do Tesauro. A coleta variável é configurada no momento do pedido, sem código de objeto próprio.
+As linhas históricas de “cadastrar objeto” abaixo não exigem que a STC crie novos
+objetos permanentes pela aplicação. Essa ampliação fica após a V1 e deverá partir de atualização do
+Tesauro; ver a [decisão de escopo](../decisoes-de-reunioes/2026-10-16-recorte-catalogo-v1-e-tesauro.md).
+
+**Situação em 16/10/2026:** o responsável limitou o MT-0018 piloto à SINFRA (UG 531010)
+e aprovou a cópia do XLSX com a confirmação na aba “Orientações”. O manifesto e o modelo
+final estão preparados na aplicação; a carga passou em SQLite isolado, mas ainda não foi
+executada em base operacional. O Tesauro de origem continua com status “Em validação” e
+versão interna divergente; o mapeamento preliminar cita SEAD como **fonte**, sem determinar
+destinatárias. A decisão humana define o recorte de uma UG; ver a decisão de escopo.
+Os exemplos do `DevelopmentSeeder` não satisfazem o aceite
+das linhas de carga/cadastro deste plano. Menções abaixo a campos digitados pelo
+respondente estão superadas pelo contrato de respostas somente por arquivos.
+
 ## Situação observada em 2026-10-14
 
 O repositório canônico privado
@@ -74,6 +90,7 @@ institucionais, levantamento, atas e demais materiais de `documentos/` continuam
 
 ## Fora da V1 mínima
 
-SEI, prazo, prorrogação, focal, ausência total, validação humana, correção, auditoria, Gabinete,
+Criação de novos objetos e sincronização futura Tesauro–Catálogo, SEI, prazo, prorrogação,
+focal, ausência total, validação humana, correção, auditoria, Gabinete,
 segurança de piloto e homologação continuam no catálogo do MVP completo, mas não são etapas ou
 critérios desta V1.
