@@ -25,7 +25,23 @@ já existentes.
 
 ## Limites e continuidade
 
-### Complemento confirmado em 17/10/2026 — arquivos solicitados
+### Revisão confirmada em 17/10/2026 — resposta por arquivos livres
+
+Confirmada pelo responsável após a auditoria de ponta a ponta da V1; substitui o complemento
+seguinte quanto aos arquivos solicitados.
+
+- A STC não cria caixas de arquivo nomeadas ao montar o pedido. O pedido informa o que é
+  solicitado e o respondente anexa os arquivos que julgar adequados; como o conteúdo não é
+  verificado, confia-se no respondente.
+- Fixo: planilha XLSX obrigatória e outros arquivos opcionais, em qualquer formato.
+  Variável: uma única área de arquivos, em qualquer formato, com ao menos um arquivo.
+- Não há "Salvar rascunho": o arquivo entra na resposta ao ser escolhido. A tela de resposta é
+  a revisão, com os arquivos abrindo ao clique antes do envio.
+- Cada UG envia uma única resposta: após o primeiro envio, o destinatário é encerrado.
+- No variável, a STC informa na criação a lista de informações (metadados) solicitadas, exibida
+  ao respondente. A implementação técnica está registrada no repositório da aplicação.
+
+### Complemento confirmado em 17/10/2026 — arquivos solicitados (substituído pela revisão acima)
 
 - A V1 ainda não possui um catálogo institucional de arquivos extras para selecionar na
   montagem da coleta. A STC descreve cada arquivo solicitado no próprio pedido, com
