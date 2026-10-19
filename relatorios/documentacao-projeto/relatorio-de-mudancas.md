@@ -77,3 +77,14 @@ Relatórios sob demanda devem ser salvos nesta própria pasta com o padrão
 - Estrutura corrigida: as tabelas das sete abas tinham nomes de coluna diferentes dos cabeçalhos, e nas abas de sprint havia duas colunas "Status". O "Critério de aceite" ficava fora da tabela, e a tabela da Sprint 9 não incluía a última linha. O Excel só abria a versão anterior no modo de reparo. As linhas de dados perderam a altura fixa de uma linha e agora mostram o texto inteiro.
 - `governanca/funcionalidades/rastreabilidade-backlog.md` passou a registrar a fundação como concluída tecnicamente.
 - Na Sprint 9, "Preparar fluxo e regras do backend" apontava para a atividade macro "Definir o fluxo principal de coleta, resposta, validação e entrega da V1", que não existe na Lista completa. Por decisão do responsável, passou a apontar para "Consolidar fontes e decisões vigentes da V1". O tratamento do plano dessa atividade macro passou de "A definir" para "Sprint 9", também na matriz de rastreabilidade.
+
+## 2026-10-19 — Nova data da apresentação da V1
+
+- A apresentação da V1 à chefia, prevista para 20/10/2026, foi remarcada para 21/10/2026, às 10h, segundo o responsável pelo projeto. A sequência acordada não mudou.
+- Atualizados com a nova data:
+  - `governanca/decisoes-de-reunioes/2026-10-19-apresentacao-v1-e-implantacao-gradual.md`, que ganhou uma nota de atualização;
+  - o bloco de encaminhamento técnico de `governanca/contexto.md`;
+  - a célula D62 da aba "Lista completa" de `planejamento/backlog-completo.xlsx`, a única alterada. O Excel abriu o arquivo sem reparo.
+- As entradas anteriores deste relatório que citam 20/10 continuam como estavam, porque registram o que valia quando foram escritas.
+- A cópia do backlog no Google Sheets, usada pelo quadro Trello, não foi alterada.
+- Recalculados os SHA-256 do inventário.

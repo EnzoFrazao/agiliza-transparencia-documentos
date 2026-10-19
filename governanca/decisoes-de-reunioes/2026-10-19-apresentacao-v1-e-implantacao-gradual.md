@@ -3,13 +3,15 @@
 **Origem:** alinhamento entre Enzo e Guilherme, informado pelo responsável pelo projeto em
 19/10/2026.
 **Status:** encaminhamento da equipe; a chefia da STC ainda vai se manifestar na reunião de
-20/10/2026.
+21/10/2026, às 10h.
+**Atualização (19/10/2026):** a reunião, prevista para 20/10/2026, foi remarcada para 21/10/2026,
+às 10h, segundo o responsável pelo projeto. A sequência não mudou.
 
 ## Sequência acordada
 
-1. **Apresentação da V1 — 20/10/2026.** Enzo e Guilherme apresentam a V1 à chefia da STC em
-   reunião.
-2. **Teste pela chefia — semana de 20/10.** A V1 fica disponível para a chefia testar a
+1. **Apresentação da V1 — 21/10/2026, às 10h.** Enzo e Guilherme apresentam a V1 à chefia da STC
+   em reunião.
+2. **Teste pela chefia — mesma semana.** A V1 fica disponível para a chefia testar a
    usabilidade e indicar o que quer mudar.
 3. **Ajustes.** A equipe implementa os ajustes pedidos pela chefia.
 4. **Implantação na SINFRA.** Depois dos ajustes, a equipe planeja a implantação para a SINFRA

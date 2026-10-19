@@ -25,7 +25,8 @@
 > continua evoluindo exclusivamente por migrations; não haverá envio ao GitLab ou ao ambiente da
 > STC antes de a solução estar completa e pronta. Ver a
 > [decisão de 01/10](decisoes-de-reunioes/2026-10-01-fundacao-tecnica-e-composicao-da-equipe.md).
-> A V1 será apresentada à chefia em 20/10/2026 e testada por ela na mesma semana. Depois dos
+> A V1 será apresentada à chefia em 21/10/2026, às 10h (a data inicial era 20/10), e testada por
+> ela na mesma semana. Depois dos
 > ajustes, vêm a implantação na SINFRA, com feedback para a versão seguinte, e a expansão gradual
 > às demais UGs e objetos; ver o
 > [encaminhamento de 19/10](decisoes-de-reunioes/2026-10-19-apresentacao-v1-e-implantacao-gradual.md).
