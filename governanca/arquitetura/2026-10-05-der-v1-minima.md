@@ -31,6 +31,25 @@ O acesso do respondente é contextual: `target_access_grants` liga uma conta a u
 publicado. Isto satisfaz o isolamento da V1 sem supor vínculo institucional duradouro pessoa–UG.
 Uma futura `user_unit_memberships` ampliará a autorização, sem substituir concessões contextuais.
 
+## Evidência de implementação em 2026-10-19
+
+Em `main` (`18c345b`, PR #11), cinco migrations posteriores ao `60f25d0` acrescentaram ao módulo
+de publicação e respostas:
+
+- `response_submissions`: evento de recebimento de cada envio, com protocolo, snapshot e SHA-256,
+  base do comprovante em PDF (PR #10);
+- pedido variável contextual sem objeto do Catálogo, com a orientação geral e a de cada arquivo
+  congeladas na publicação;
+- `supplementary` em `response_files`, para os “outros arquivos” de qualquer formato;
+- `requested_information_snapshot` em `cycle_versions`, com a lista de informações do variável;
+- fechamento do destinatário no primeiro envio (`collection_targets.closed_at`), que torna a
+  resposta única por UG.
+
+O modelo e a destinatária do MT-0018 (SINFRA, UG 531010) foram aprovados pelo responsável em
+16/10 ([decisão de escopo](../decisoes-de-reunioes/2026-10-16-recorte-catalogo-v1-e-tesauro.md)).
+A carga controlada está pronta, mas não foi executada em base operacional, e isso não equivale a
+homologação institucional. O detalhe das colunas está em `agiliza-stc/docs/modelo-de-dados.md`.
+
 ## Limites
 
 Keycloak, vínculo institucional definitivo, ponto focal, adjuntas, SEI, prazo, auditoria e validação

@@ -21,10 +21,10 @@ flowchart LR
 
   subgraph STC["Administrador/STC"]
     direction TB
-    S1["[S11] Configura objeto variável<br/>para o pedido contextual da UG"]
+    S1["[S11] Configura o pedido variável<br/>contextual da UG, sem objeto permanente"]
     S2{"[S11/13] Tipo de coleta"}
-    SV["[S11] Configura item e upload obrigatório<br/>no objeto variável"]
-    SF["[S13] Cadastra objeto fixo e associa<br/>um XLSX oficial"]
+    SV["[S11] Informa a lista de informações<br/>e exige ao menos um arquivo"]
+    SF["[S13] Usa o objeto fixo piloto carregado<br/>e seu XLSX oficial"]
     SPV["[S11] Publica a coleta variável<br/>sem estado parcial e gera link"]
     SPF["[S13] Publica a coleta fixa<br/>com referência ao XLSX e gera link"]
     SR["[S12/14] Localiza a resposta recebida<br/>e baixa o arquivo principal"]
@@ -36,17 +36,19 @@ flowchart LR
     R2["[S12] Faz identificação mínima<br/>no contexto da UG"]
     R3{"Tipo publicado"}
 
-    V1["[S12] Vê somente campos e anexos<br/>variáveis publicados"]
-    V2["[S12] Preenche campos e seleciona upload"]
-    V3["[S12] Guarda o arquivo no rascunho mínimo"]
-    V4{"Há upload?"}
-    V5["[S12] Envia e persiste<br/>resposta variável + arquivo"]
+    V1["[S12] Vê a lista de informações<br/>e a orientação publicadas"]
+    V2["[S12] Anexa arquivos em qualquer formato"]
+    V3["[S12] O arquivo entra no rascunho ao ser escolhido;<br/>a revisão abre cada arquivo"]
+    V4{"Há ao menos<br/>um arquivo?"}
+    V5["[S12] Envia e persiste<br/>resposta variável + arquivos"]
 
     F1["[S13] Baixa o XLSX oficial"]
-    F2["[S13] Preenche e seleciona<br/>o XLSX como arquivo principal"]
-    F3["[S13] Mantém o arquivo no rascunho mínimo"]
+    F2["[S13] Anexa o XLSX preenchido<br/>e outros arquivos opcionais"]
+    F3["[S13] O arquivo entra no rascunho ao ser escolhido;<br/>a revisão abre cada arquivo"]
     F4{"XLSX compatível<br/>com o modelo?"}
     F5["[S14] Envia e persiste<br/>resposta fixa + XLSX"]
+
+    RC["[S12/14] Recebe comprovante PDF;<br/>a UG fica encerrada"]
   end
 
   B4 --> S2
@@ -56,11 +58,12 @@ flowchart LR
 
   R3 -->|"variável"| V1 --> V2 --> V3 --> V4
   V4 -->|"não: bloquear envio"| V2
-  V4 -->|"sim"| V5 --> SR
+  V4 -->|"sim"| V5 --> RC
 
   R3 -->|"fixo"| F1 --> F2 --> F3 --> F4
   F4 -->|"não: recusar arquivo"| F2
-  F4 -->|"sim"| F5 --> SR
+  F4 -->|"sim"| F5 --> RC
+  RC --> SR
 
   classDef base fill:#EEEDFE,stroke:#7F77DD,stroke-width:2px,color:#3C3489;
   classDef stc fill:#E6F1FB,stroke:#185FA5,stroke-width:2px,color:#0C447C;
@@ -68,7 +71,7 @@ flowchart LR
   classDef decision fill:#FAEEDA,stroke:#BA7517,stroke-width:2px,color:#633806;
   class B1,B2,B3,B4 base;
   class S1,SV,SF,SPV,SPF,SR stc;
-  class R1,R2,V1,V2,V3,V5,F1,F2,F3,F5 ug;
+  class R1,R2,V1,V2,V3,V5,F1,F2,F3,F5,RC ug;
   class S2,R3,V4,F4 decision;
 ```
 
@@ -76,9 +79,13 @@ flowchart LR
 
 - A publicação é contextual: o link leva apenas ao pedido publicado e o respondente não consulta
   outro pedido. A identificação não decide o vínculo permanente pessoa–UG, que continua pendente.
-- Objeto variável não gera nem recebe XLSX. Seus campos diretos não substituem o upload mínimo
-  planejado para esta V1.
-- Objeto fixo usa um único XLSX oficial como arquivo principal. A checagem é de compatibilidade
-  mínima; não inclui validação humana do conteúdo.
-- A resposta chega à STC para consulta e download. Comprovante, focal, ausência, prazo, correção,
-  validação, auditoria, Gabinete e homologação permanecem fora deste recorte.
+- O pedido variável não gera XLSX nem tem campos digitados: a STC informa a lista de informações
+  solicitadas, e o respondente anexa ao menos um arquivo, em qualquer formato.
+- Objeto fixo usa um único XLSX oficial como arquivo principal; outros arquivos são opcionais. A
+  checagem é de compatibilidade mínima; não inclui validação humana do conteúdo.
+- Não há “Salvar rascunho”. Cada UG envia uma única resposta, e o primeiro envio encerra o
+  destinatário. Ver a revisão de 17/10 na
+  [decisão de escopo](../decisoes-de-reunioes/2026-10-16-recorte-catalogo-v1-e-tesauro.md).
+- A resposta chega à STC para consulta e download, e o envio gera comprovante em PDF. Focal,
+  ausência, prazo, correção, validação, auditoria, Gabinete e homologação permanecem fora deste
+  recorte.

@@ -1,13 +1,14 @@
 # Handoff técnico do backend — V1 mínima
 
 **Status:** referência de implementação para a V1; não substitui contrato HTTP, OpenAPI, esquema
-de banco ou autenticação institucional aprovados. No snapshot de 2026-10-14, o repositório canônico
+de banco ou autenticação institucional aprovados. No snapshot de 2026-10-19, o repositório canônico
 privado
 [`Oxygeni-Projetos-Estagiarios/agiliza-stc`](https://github.com/Oxygeni-Projetos-Estagiarios/agiliza-stc)
-mantém a fundação e a implementação HTTP V1 em `main` (`60f25d0`, PR #5 mesclado em
-2026-10-14). O código usa Laravel 13, Inertia React, PHP, React 19, TypeScript, Vite e Tailwind.
-PostgreSQL, migrations, rotas `/api/v1` e telas `/v1` foram exercitados, e o build da imagem `app`
-do Compose foi verificado. O DBeaver fica restrito à inspeção do banco, e nenhuma
+mantém a fundação e a implementação HTTP V1 em `main` (`c6066b9`). Ela inclui o comprovante de
+envio (PR #10) e a preparação para homologação (PR #11, `18c345b`). O código usa Laravel 13,
+Inertia React, PHP, React 19, TypeScript, Vite e Tailwind. PostgreSQL, migrations, rotas `/api/v1`
+e telas `/v1` foram exercitados. A imagem de produção foi ensaiada atrás de proxy HTTPS. O DBeaver
+fica restrito à inspeção do banco, e nenhuma
 versão será enviada ao GitLab ou ao ambiente da STC antes de a solução estar completa e pronta.
 
 ## Escopo e autoridade
@@ -39,7 +40,7 @@ flowchart LR
     direction TB
     S1["[S11/13] Configura pedido contextual<br/>e escolhe o tipo de objeto"]
     S2{"Tipo publicado?"}
-    SV["[S11] Configura campos e pelo menos um<br/>upload obrigatório do objeto variável"]
+    SV["[S11] Configura a lista de informações<br/>e exige ao menos um arquivo no variável"]
     SF["[S13] Associa um XLSX oficial<br/>ao objeto fixo"]
     SPV["[S11] Publica sem estado parcial<br/>e disponibiliza link contextual"]
     SPF["[S13] Publica com referência<br/>ao XLSX oficial e link contextual"]
@@ -52,17 +53,19 @@ flowchart LR
     R2["[S12] Faz identificação mínima<br/>no contexto daquele pedido"]
     R3{"Tipo do pedido?"}
 
-    V1["[S12] Recebe somente campos e anexos<br/>variáveis publicados"]
-    V2["[S12] Preenche e seleciona upload"]
-    V3["[S12] Mantém o rascunho mínimo"]
-    V4{"Há upload?"}
-    V5["[S12] Envia: backend persiste<br/>resposta variável e arquivo"]
+    V1["[S12] Recebe a lista de informações<br/>e a orientação publicadas"]
+    V2["[S12] Anexa arquivos em qualquer formato"]
+    V3["[S12] Grava cada arquivo no rascunho<br/>ao ser escolhido"]
+    V4{"Há ao menos<br/>um arquivo?"}
+    V5["[S12] Envia: backend persiste<br/>resposta variável e arquivos"]
 
     F1["[S13] Baixa o XLSX oficial"]
-    F2["[S13] Preenche e seleciona o XLSX<br/>como arquivo principal"]
-    F3["[S13] Mantém o rascunho mínimo"]
+    F2["[S13] Anexa o XLSX como arquivo principal<br/>e outros arquivos opcionais"]
+    F3["[S13] Grava cada arquivo no rascunho<br/>ao ser escolhido"]
     F4{"XLSX é minimamente compatível?"}
     F5["[S14] Envia: backend persiste<br/>resposta fixa e XLSX"]
+
+    RC["[S12/14] Registra o envio, emite comprovante PDF<br/>e encerra o destinatário"]
   end
 
   B4 --> S1 --> S2
@@ -72,11 +75,12 @@ flowchart LR
 
   R3 -->|"variável"| V1 --> V2 --> V3 --> V4
   V4 -->|"não: bloquear envio"| V2
-  V4 -->|"sim"| V5 --> SR
+  V4 -->|"sim"| V5 --> RC
 
   R3 -->|"fixo"| F1 --> F2 --> F3 --> F4
   F4 -->|"não: recusar arquivo"| F2
-  F4 -->|"sim"| F5 --> SR
+  F4 -->|"sim"| F5 --> RC
+  RC --> SR
 
   classDef base fill:#EEEDFE,stroke:#7F77DD,stroke-width:2px,color:#3C3489;
   classDef stc fill:#E6F1FB,stroke:#185FA5,stroke-width:2px,color:#0C447C;
@@ -84,7 +88,7 @@ flowchart LR
   classDef decision fill:#FAEEDA,stroke:#BA7517,stroke-width:2px,color:#633806;
   class B1,B2,B3,B4 base;
   class S1,SV,SF,SPV,SPF,SR stc;
-  class R1,R2,V1,V2,V3,V5,F1,F2,F3,F5 ug;
+  class R1,R2,V1,V2,V3,V5,F1,F2,F3,F5,RC ug;
   class S2,R3,V4,F4 decision;
 ```
 
@@ -94,16 +98,16 @@ flowchart LR
 | --- | --- | --- |
 | Acesso | O link e a identificação mínima levam apenas ao pedido contextual da UG; não expõem pedido de outra UG. | RF-010, RF-100, RNF-001, CA-016 — somente no limite V1 |
 | Publicação | A publicação não deixa estado parcial, não duplica o pedido e produz o link contextual. | RF-081 — somente no limite V1 |
-| Objeto variável | Não há XLSX. Campos podem complementar, mas ao menos um upload publicado é necessário para enviar. | RF-092, RF-093, RN-023, CA-013 |
-| Objeto fixo | Há um único XLSX oficial como arquivo principal; arquivo incompatível não conclui o envio. | RF-091, CA-003 — somente no limite V1 |
-| Resposta | O envio persiste a resposta e o arquivo para consulta e download pela STC. | RF-020, RF-061, RNF-008 |
+| Objeto variável | Não há XLSX nem campos digitados. A STC informa a lista de informações, e ao menos um arquivo, de qualquer formato, é necessário para enviar. | RF-092, RF-093, RN-023, CA-013 |
+| Objeto fixo | Há um único XLSX oficial como arquivo principal, com outros arquivos opcionais; arquivo incompatível não conclui o envio. | RF-091, CA-003 — somente no limite V1 |
+| Resposta | O envio persiste a resposta e os arquivos para consulta e download pela STC, registra o comprovante e encerra o destinatário: uma resposta por UG. | RF-016, RF-020, RF-056, RF-061, RNF-008 — somente no limite V1 |
 | Isolamento | Ações de STC e Respondente são distintas; o respondente não acessa pedido de outra UG. | RNF-001, RNF-005, RNF-007, RNF-008 |
 
 ## Fora deste handoff
 
 Não implementar como obrigação desta V1: ponto focal ou adjuntas; ausência total; prazo,
 prorrogação ou envio atrasado; número ou integração automática com SEI; validação humana,
-devolução, correção, comprovante ou auditoria; Gabinete; SSO/Keycloak; parâmetros reais do
+devolução, correção, reenvio ou auditoria; Gabinete; SSO/Keycloak; parâmetros reais do
 PostgreSQL institucional; todos os objetos do catálogo; e homologação. Esses itens continuam no
 MVP completo ou em pendências, mas não são etapas deste fluxo.
 

@@ -14,12 +14,14 @@
 >
 > **Status da fase:** entrevistas da 1ª rodada **encerradas** (STC: 4; UGs: 5, em 4 órgãos); **DETRAN e PM** ouvidos na sequência (UGs novas). Restam órgãos e a **TI da ouvidoria**, ouvidos **durante o desenvolvimento**. **O protótipo visual do MVP 1.0 está construído** (front-end only, React/TS, auditado e publicado). A fase agora é **validar o MVP/requisitos com a STC e refinar o protótipo**, antes de construir o MVP com backend. O **estado detalhado do protótipo** fica em `andamento_do_prototipo.md` (documento à parte, para não misturar status de implementação com as decisões de produto).
 
-> **Encaminhamento técnico (snapshot 2026-10-14):** o repositório canônico privado
+> **Encaminhamento técnico (snapshot 2026-10-19):** o repositório canônico privado
 > [`Oxygeni-Projetos-Estagiarios/agiliza-stc`](https://github.com/Oxygeni-Projetos-Estagiarios/agiliza-stc)
-> mantém a fundação Laravel/Inertia e a V1 HTTP em `main` (`60f25d0`, PR #5 mesclado em
-> 2026-10-14). O código contém domínio persistente, PostgreSQL validado por migrations, API,
-> cliente TypeScript e telas `/v1` para coleta fixa e variável. O build da imagem `app` do Compose
-> foi verificado nesta data. Homologação, UAT e retirada de dados demo seguem abertos. O schema
+> mantém a fundação Laravel/Inertia e a V1 HTTP em `main` (`c6066b9`). O código contém domínio
+> persistente, PostgreSQL validado por migrations, API, cliente TypeScript e telas `/v1` para
+> coleta fixa e variável, com comprovante de envio em PDF (PR #10) e a preparação para homologação
+> (PR #11, `18c345b`, 19/10). A imagem de produção e a homologação foram ensaiadas; ambiente real,
+> carga operacional do piloto e UAT com a STC e a SINFRA seguem abertos. O estado detalhado está em
+> [`funcionalidades/v1-minima.md`](funcionalidades/v1-minima.md). O schema
 > continua evoluindo exclusivamente por migrations; não haverá envio ao GitLab ou ao ambiente da
 > STC antes de a solução estar completa e pronta. Ver a
 > [decisão de 01/10](decisoes-de-reunioes/2026-10-01-fundacao-tecnica-e-composicao-da-equipe.md).
@@ -803,7 +805,7 @@ medicoes     (id, contrato_id, numero, valor, os_ref, sei_ref, status_obra['anda
 
 **Pendências surgidas do protótipo/Tesauro (v9.0):**
 - ⏳ **P-023 — Justificativa de anexo faltante** não destrava o envio no protótipo — confirmar o comportamento desejado.
-- ⏳ **P-024 — Contradições e versionamento do Tesauro:** `MT-0011`/`MT-0049` (fluxo manual × nota de automação); versão do arquivo (`v2_3`) × instruções internas (**v2.2**); instrução de sequência (novos a partir de MT-0049) × arquivo que já traz MT-0049. Até confirmar, segue-se a coluna **Fluxo de Origem**.
+- ⏳ **P-024 — Contradições e versionamento do Tesauro:** `MT-0011`/`MT-0049` (fluxo manual × nota de automação); versão do arquivo (`v2_3`) × instruções internas (**v2.2**); instrução de sequência (novos a partir de MT-0049) × arquivo que já traz MT-0049. Até confirmar, segue-se a coluna **Fluxo de Origem**. *(19/10/2026: a v2.3 saiu do acervo, substituída pela v2.6; a divergência de versão persiste nela — nome v2.6 × aba “Instruções” v2.5.)*
 - ⏳ **P-025 — Nomenclatura e nº de perfis internos da STC:** confirmar os nomes oficiais (Analista/Especialista × superintendente/STR/operador) e se haverá um terceiro perfil “operador” (mais simples, sem telas gerenciais). Ver §0.3.1.
 
 **Pendências levantadas na revisão do protótipo (v9.0):**
@@ -819,9 +821,19 @@ medicoes     (id, contrato_id, numero, valor, os_ref, sei_ref, status_obra['anda
 - ⏳ **P-030 — Identificação por CPF via API (base de servidores):** usar **CPF** contra uma **base existente de todos os servidores das UGs** (via API) em vez de login e-mail/senha. **Robustece a identificação, reduz fraude de autocadastro e pré-preenche o cadastro.** Evolui P-016 (hoje R3/híbrido) e a autenticação (§11/§22). **Depende de:** confirmar acesso/propriedade da base — concretamente o **login/banco do SEI (CPF+senha), operado pela ATI** (Agência Estadual de TI do MA), com **STI/Antônio** coordenando pela STC —, **LGPD/autorização** e um **fallback** para quem não está na base (terceirizados/adjuntas). *Lean:* perseguir, com Keycloak podendo federar/consumir essa base como fonte de identidade. Desenho detalhado (Sanctum+RLS, CPF, cenários da ATI): `docs/ideia de login.md`.
 
 **Ações operacionais que destravam (não são decisão de produto):**
-- ⏳ **Escolher o objeto-piloto** — reenviar o Tesauro e escolher juntos o primeiro objeto a provar a coleta ponta a ponta (critério sugerido: fixo, tabular, sem anexo, poucos campos e poucas UGs).
+- ✔ **Escolher o objeto-piloto** — **resolvido em 16/10/2026:** MT-0018 com a SINFRA (UG 531010) como única destinatária; ver a [decisão de escopo](decisoes-de-reunioes/2026-10-16-recorte-catalogo-v1-e-tesauro.md).
 - ⏳ **Lista da Alessandra (UGs × objetos fixos)** — é o insumo de P-022; segue pendente e bloqueia a pré-seleção de UGs na criação.
 - ✔ **Divergência técnico × levantamento (era ação pendente):** com os dois documentos disponíveis, a divergência foi identificada — sigilo (SRS mantém, técnico removeu), obras (SRS modela, técnico trata como envio por área) e P-012. Ambos estão defasados frente à v8.0/v9.0 e serão **realinhados**.
+
+**Pendências de implantação da V1 (19/10/2026):** perguntas à STC e à TI que não bloqueiam o piloto,
+mas precisam de resposta antes do uso real ou da ampliação. Os códigos são os do repositório da
+aplicação, em [`agiliza-stc/specs/open-decisions.md`](../../agiliza-stc/specs/open-decisions.md), e
+não se confundem com a numeração acima.
+- ⏳ **Contas STC de produção** (`agiliza-stc` P-002) — quem pode pedir uma conta e como se recupera o acesso. Hoje a conta é criada por comando técnico.
+- ⏳ **Rascunhos de outras pessoas da UG** (`agiliza-stc` P-008) — depois que a UG responde, manter, deixar o dono apagar ou descartar os rascunhos não enviados.
+- ⏳ **Hospedagem, operação e cópias de segurança** (`agiliza-stc` P-009) — onde a V1 roda, quem a opera e qual a rotina e a retenção das cópias. Responsáveis esperados: TI da STC e Guilherme.
+- ⏳ **Varredura dos arquivos recebidos** (`agiliza-stc` P-010) — se os arquivos das UGs passam por antivírus antes de a STC baixá-los. Hoje não há varredura.
+- ⏳ **Dados das planilhas no banco, após a V1** (`agiliza-stc` P-011) — se as linhas dos XLSX enviados entram no banco para consulta e relatório. Hoje ficam guardadas só como arquivo.
 
 > **Dependências/ações que independem de novas UGs:** conversa com a **Alessandra** (P-002); **APIs e infra** com **Antônio/STI** (P-015); **TI da ouvidoria** (questionário — respondente real de vários dados); confirmar nº de objetos manuais (“8 a 10”) e de órgãos (“60+”). *(A IN do ponto focal não será mexida nesta fase.)* *(v8.0: P-002 e o Alerta §17 já resolvidos; a ação-chave com a Alessandra passa a ser **montar o mapeamento informação↔órgão** — P-022.)*
 

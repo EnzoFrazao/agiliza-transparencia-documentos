@@ -2,7 +2,8 @@
 
 Esta é a biblioteca documental única do Agiliza Transparência. Ela contém material institucional
 não técnico, organizado por autoridade e finalidade. Código, specs, prompts e memória técnica
-permanecem em `STC/agiliza-transparencia`.
+permanecem no repositório canônico `STC/agiliza-stc`. O histórico do protótipo legado fica
+somente no repositório privado `EnzoFrazao/agiliza-transparencia`, no GitHub.
 
 ## Estrutura
 

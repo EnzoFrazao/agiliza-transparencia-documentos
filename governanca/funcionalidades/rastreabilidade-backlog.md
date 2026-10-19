@@ -14,22 +14,24 @@ Esta matriz preserva o nome de cada atividade da aba **Lista completa**. Quando 
 recorte nas Sprints 9–14, a terceira coluna aponta a atividade granular correspondente; quando não
 possui, mantém **A definir**. Os nós remetem aos três fluxos vigentes.
 
-## Situação técnica em 2026-10-14
+## Situação técnica em 2026-10-19
 
 O planejamento abaixo não é um registro de release. A V1 de acesso contextual, publicação, coleta
-variável/fixa, arquivos, validação estrutural, envio e download está em `main` (`60f25d0`, PR #5
-mesclado em 2026-10-14). A fundação Laravel/PostgreSQL foi exercitada e o build da imagem `app` do
-Compose foi verificado. O ajuste de compatibilidade do teste de download com jsdom está no PR #6,
-ainda em revisão. Homologação, UAT e retirada de dados demo continuam abertos.
+variável/fixa, arquivos, validação estrutural, envio e download entrou em `main` pelo PR #5
+(`60f25d0`, 14/10). O comprovante de envio em PDF veio pelo PR #10 (16/10) e a preparação para
+homologação pelo PR #11 (`18c345b`, 19/10). O PR #6 foi fechado sem merge; o ajuste do teste de
+download com jsdom entrou pelo PR #7 (15/10). A imagem de produção e a homologação foram ensaiadas;
+ambiente real, carga operacional do piloto e UAT continuam abertos. Ver a
+[situação da V1](v1-minima.md#situação-observada-em-2026-10-19).
 
 ## Resumo por capacidade
 
 | Capacidade | Planejamento | Fluxo dominante |
 | --- | --- | --- |
 | Fundação, transporte, acesso e isolamento | Sprints 9–10; fundação em andamento, acesso concluído tecnicamente | V1 — pré-requisitos |
-| Publicação e coleta variável/fixa | Sprints 11–14; concluída tecnicamente na branch V1 | V1 e coleta MVP |
+| Publicação e coleta variável/fixa | Sprints 11–14; concluída tecnicamente em `main` | V1 e coleta MVP |
 | Coordenação, validação, histórico e operação | A definir | Coleta MVP e gestão interna |
-| Qualidade, piloto e homologação | A definir; ajuste do teste jsdom em revisão no PR #6 | Transversal |
+| Qualidade, piloto e homologação | A definir; homologação ensaiada, UAT e ambiente real pendentes | Transversal |
 
 ## Matriz granular
 
@@ -60,7 +62,7 @@ ainda em revisão. Homologação, UAT e retirada de dados demo continuam abertos
 | Receber campos diretos e uploads em objeto variável sem modelo XLSX obrigatório | Sprint 12 | **S12:** exibir campos/anexos; guardar upload → V1:V1–V3 | RF-092, RF-093, RN-023, CA-013 |
 | Baixar, preencher e enviar o modelo XLSX oficial obrigatório do objeto fixo | Sprint 13 | **S13:** baixar/receber XLSX → V1:F1–F3 | RF-091, RF-061, CA-003 |
 | Salvar rascunho e arquivos vigentes em storage desacoplado | Sprints 12 e 13 | **S12/S13:** guardar arquivo no rascunho → V1:V3 e F3 | RF-014, RF-065 |
-| Enviar pacote completo e emitir comprovante auditável | Sprints 12 e 14 | **S12/S14:** enviar resposta → V1:V5 e F5; comprovante ainda sem aceite granular | RF-016, RNF-003 |
+| Enviar pacote completo e emitir comprovante auditável | Sprints 12 e 14 | **S12/S14:** enviar resposta → V1:V5 e F5; comprovante PDF em `main` (PR #10), ainda sem aceite granular | RF-016, RNF-003 |
 | Integrar painéis e contribuição às APIs da sprint | Sprints 12 e 14 | **S12/S14:** exibir e baixar resposta → V1:SR | RNF-008 |
 | Aplicar modos direto, focal coordenador e focal observador | A definir | Coleta MVP:U2–U4 e F1–F2 | RF-059, RF-087, RN-011 |
 | Preservar o escopo durante a revisão focal | A definir | Coleta MVP:F2; capacidade pendente | RF-094, RN-005 |

@@ -1,7 +1,7 @@
 # Regras de negócio — Agiliza Transparência
 
-**Versão:** 8.1  
-**Data:** 2026-09-25  
+**Versão:** 8.2  
+**Data:** 2026-10-19  
 **Fontes normativas:** decisões de 31/08 em
 [`decisoes-de-reunioes/2026-08-31-reuniao-apresentacao-agiliza.md`](decisoes-de-reunioes/2026-08-31-reuniao-apresentacao-agiliza.md)
 e consolidação posterior registrada em [`contexto.md`](contexto.md).
@@ -15,6 +15,14 @@ de novos objetos nem sincronização automática. Ver a
 e o plano técnico `../../agiliza-stc/specs/changes/2026-10-16-respostas-somente-arquivos-v1.md`.
 Formulações históricas abaixo sobre campos diretos e cadastro de novos objetos ficam
 subordinadas a este recorte na V1.
+
+**Revisão da V1 confirmada em 17/10/2026:** a STC não cria caixas de arquivo nomeadas; o
+respondente anexa os arquivos que julgar adequados. Não há “Salvar rascunho”: o arquivo entra na
+resposta ao ser escolhido, e o RF-014 continua valendo só para o MVP completo. Cada UG envia uma
+única resposta, e o primeiro envio encerra o destinatário. No variável, a STC informa na criação a
+lista de informações solicitadas. O envio gera comprovante em PDF com protocolo, “recebido para
+conferência”, sem afirmar validação do conteúdo; na V1 isso atende ao RF-016 apenas para o envio
+atual, sem reenvio.
 
 ## 1. Objetivo
 
@@ -45,6 +53,7 @@ histórico.
 - identificação mínima do respondente no pedido da sua UG;
 - resposta variável com upload obrigatório e resposta fixa com XLSX oficial;
 - envio, persistência mínima, consulta e download da resposta pela STC;
+- comprovante de envio em PDF para o respondente e a STC;
 - remoção de dados demonstrativos e correção de defeitos bloqueantes nos dois caminhos.
 
 ### 2.2 MVP completo — catálogo de capacidades

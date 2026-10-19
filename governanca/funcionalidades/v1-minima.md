@@ -19,25 +19,33 @@ Os exemplos do `DevelopmentSeeder` não satisfazem o aceite
 das linhas de carga/cadastro deste plano. Menções abaixo a campos digitados pelo
 respondente estão superadas pelo contrato de respostas somente por arquivos.
 
-## Situação observada em 2026-10-14
+**Revisão de 17/10/2026:** o “rascunho mínimo” das linhas V3 e F3 é o arquivo guardado no
+servidor assim que o respondente o escolhe; não há botão “Salvar rascunho”. Cada UG envia uma
+única resposta, e o primeiro envio encerra o destinatário. No variável, a STC informa na criação
+a lista de informações solicitadas. Ver a revisão na
+[decisão de escopo](../decisoes-de-reunioes/2026-10-16-recorte-catalogo-v1-e-tesauro.md).
+
+## Situação observada em 2026-10-19
 
 O repositório canônico privado
 [`Oxygeni-Projetos-Estagiarios/agiliza-stc`](https://github.com/Oxygeni-Projetos-Estagiarios/agiliza-stc)
-mantém a fundação e a V1 HTTP em `main` (`60f25d0`, PR #5 mesclado em 2026-10-14). Ela inclui
-domínio persistente, rotas `/api/v1`, cliente TypeScript e telas `/v1` para os percursos fixo e
-variável.
+mantém a V1 em `main` (`c6066b9`). Depois do PR #5 (`60f25d0`, 14/10), entraram o envio auditável
+com comprovante em PDF (PR #10, 16/10) e a preparação para homologação (PR #11, `18c345b`, 19/10):
+resposta por arquivos livres, lista de informações no variável, uma resposta por UG, XLSX
+tolerante ao Excel e ao LibreOffice, telas em português, conta STC criada por comando e imagem de
+produção sem as telas do protótipo.
 
-As evidências registradas no repositório canônico incluem 99 testes PHP e 408 asserções em SQLite
-e PostgreSQL isolados, 64 arquivos/685 testes Vitest e dois E2E `/v1`. O PostgreSQL e as migrations
-foram exercitados, e o build da imagem `app` do Compose foi verificado; retirada de dados demo,
-UAT e homologação não estão concluídos. Fontes
-institucionais, levantamento, atas e demais materiais de `documentos/` continuam fora do código.
+A imagem de produção foi ensaiada atrás de proxy HTTPS, e a homologação ensaiada nos 11 cenários do
+roteiro terminou com 82 verificações OK. Faltam o ambiente real, a carga do piloto em base
+operacional e o UAT com a STC e a SINFRA. Comandos e resultados ficam em
+`../../../agiliza-stc/specs/testing.md`. Fontes institucionais, levantamento, atas e demais
+materiais de `documentos/` continuam fora do código.
 
 | Recorte | Status técnico | Integração |
 | --- | --- | --- |
-| Fundação Laravel/PostgreSQL e container | Em andamento | Base em `main` (`60f25d0`); build da imagem `app` verificado em 2026-10-14 |
-| Acesso, publicação, coleta e download V1 | Concluído tecnicamente | `main` (`60f25d0`, PR #5 mesclado) |
-| Homologação, UAT e retirada de demos | Em andamento ou planejado | Sem integração de release |
+| Fundação Laravel/PostgreSQL e container | Em andamento | Imagem de produção ensaiada atrás de HTTPS em `main` (`18c345b`); ambiente real pendente |
+| Acesso, publicação, coleta, download e comprovante V1 | Concluído tecnicamente | `main` (`18c345b`, PR #11 mesclado em 19/10) |
+| Homologação, UAT e retirada de demos | Em andamento | Homologação ensaiada; UAT, carga operacional e ambiente real pendentes |
 
 ## Pré-requisitos técnicos
 
