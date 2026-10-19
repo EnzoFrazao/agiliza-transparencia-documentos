@@ -68,7 +68,7 @@ Relatórios sob demanda devem ser salvos nesta própria pasta com o padrão
 
 ## 2026-10-19 — Revisão do backlog
 
-- `planejamento/backlog-completo.xlsx` conferido contra o estado da V1. Foram alteradas 41 células de status, evidência e critério; nomes de atividades, descrições e tratamento do plano foram preservados, e não entraram linhas novas.
+- `planejamento/backlog-completo.xlsx` conferido contra o estado da V1. Foram alteradas 43 células de status, evidência, critério e origem. Nomes de atividades e descrições foram preservados, o tratamento do plano mudou só no caso da Sprint 9 descrito abaixo, e não entraram linhas novas.
   - A fundação Laravel/PostgreSQL passou a "Concluído tecnicamente" (Lista completa, Sprint 9 e Sprint 10), com a suíte em PostgreSQL 17. O PostgreSQL institucional segue com a fundação de homologação.
   - A atribuição por pessoa e adjunta voltou a "Em andamento": as adjuntas não foram implementadas. "Copiar link e texto manual para uso no processo SEI" passou a "Em andamento": copiar e girar link existem, mas o texto para o SEI não.
   - As evidências passaram a registrar a resposta só por arquivos (17/10), o pedido variável no ato, a resposta única por UG (18/10), o comprovante em PDF, a carga controlada do MT-0018 e o bloqueio da imagem corrigido no PR #13, ainda aberto.
@@ -76,4 +76,4 @@ Relatórios sob demanda devem ser salvos nesta própria pasta com o padrão
   - O teste de usabilidade da chefia a partir de 20/10/2026 aparece como adiantamento em relação às Sprints 12–14, sem atividade nem data.
 - Estrutura corrigida: as tabelas das sete abas tinham nomes de coluna diferentes dos cabeçalhos, e nas abas de sprint havia duas colunas "Status". O "Critério de aceite" ficava fora da tabela, e a tabela da Sprint 9 não incluía a última linha. O Excel só abria a versão anterior no modo de reparo. As linhas de dados perderam a altura fixa de uma linha e agora mostram o texto inteiro.
 - `governanca/funcionalidades/rastreabilidade-backlog.md` passou a registrar a fundação como concluída tecnicamente.
-- Pendência: na Sprint 9, "Preparar fluxo e regras do backend" aponta para a atividade macro "Definir o fluxo principal de coleta, resposta, validação e entrega da V1", que não existe na Lista completa nem na matriz de rastreabilidade.
+- Na Sprint 9, "Preparar fluxo e regras do backend" apontava para a atividade macro "Definir o fluxo principal de coleta, resposta, validação e entrega da V1", que não existe na Lista completa. Por decisão do responsável, passou a apontar para "Consolidar fontes e decisões vigentes da V1". O tratamento do plano dessa atividade macro passou de "A definir" para "Sprint 9", também na matriz de rastreabilidade.

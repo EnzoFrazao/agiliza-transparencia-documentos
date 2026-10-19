@@ -37,7 +37,7 @@ ambiente real, carga operacional do piloto e UAT continuam abertos. Ver a
 
 | Atividade macro do backlog | Planejamento atual | Atividade granular / nó do fluxo | Regras aplicáveis |
 | --- | --- | --- | --- |
-| Consolidar fontes e decisões vigentes da V1 | A definir | Governança; não é etapa de usuário | RN-001, RNF-004 |
+| Consolidar fontes e decisões vigentes da V1 | Sprint 9 | **S9:** Preparar fluxo e regras do backend; governança, não é etapa de usuário | RN-001, RNF-004 |
 | Criar backlog normativo e planilha operacional por sprint | A definir | Governança; não é etapa de usuário | RNF-004 |
 | Aplicar os três handoffs de 31/08 somente no snapshot | A definir | Transversal de interface; fora dos fluxos | RNF-005 a RNF-007 |
 | Validar visualmente os handoffs em 375, 768, 1024 e 1440 px | A definir | Transversal de interface; fora dos fluxos | RNF-005 a RNF-007 |
