@@ -60,3 +60,8 @@ Relatórios sob demanda devem ser salvos nesta própria pasta com o padrão
 - Removida a cópia local do protótipo legado `STC/agiliza-transparencia/`. Todos os commits já estavam no GitHub. Os stashes e os arquivos locais ignorados foram preservados fora do workspace antes da remoção.
 - Recalculados os SHA-256 do inventário.
 - Seguem pendentes o ambiente real, a carga operacional do piloto e o UAT com a STC e a SINFRA.
+
+## 2026-10-19 — Encaminhamento da apresentação e da implantação da V1
+
+- Registrado em `governanca/decisoes-de-reunioes/2026-10-19-apresentacao-v1-e-implantacao-gradual.md` o encaminhamento combinado entre Enzo e Guilherme: apresentação da V1 à chefia em 20/10/2026, teste de usabilidade pela chefia na mesma semana, ajustes, implantação na SINFRA com feedback para a versão seguinte e expansão gradual às demais UGs e objetos.
+- `governanca/contexto.md` passou a apontar esse encaminhamento no bloco de encaminhamento técnico. O ambiente do teste da chefia e as datas da implantação seguem sem definição.
