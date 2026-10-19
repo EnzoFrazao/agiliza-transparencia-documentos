@@ -23,7 +23,7 @@ Este inventário registra todos os arquivos preservados após a curadoria de 202
 | `governanca/funcionalidades/README.md` | Vigente | Índice das funcionalidades | `E15D6DE8CB411316AF2BC557D53D87882057E8F641EA090DA3C472E73195D744` |
 | `governanca/funcionalidades/mvp-completo.md` | Vigente | Catálogo do MVP completo | `85731F283C7F62F78E3915D5F9DA52647462104AFA869A38EC80248A01BDE0BA` |
 | `governanca/funcionalidades/v1-minima.md` | Vigente | Corte V1 mínima | `C70811E742E0221EE266C98C63680FCED7D22EB418DD81E3BD2DB691F86C185D` |
-| `governanca/funcionalidades/rastreabilidade-backlog.md` | Vigente | Matriz de rastreabilidade | `41E4D8E419A6918AD888FA11C32FC6A65DFF0939D9211909935B1FCAB94C35E3` |
+| `governanca/funcionalidades/rastreabilidade-backlog.md` | Vigente | Matriz de rastreabilidade | `767E90DE043DDE27525D4E1317C3D6A2342B0C46755C4565702CCB084989092D` |
 | `governanca/mapeamentos/Mapeamento_preliminar_Objetos_Fontes_UGs_ate_Emendas.xlsx` | Vigente | Consolidado institucional | `6491F25580E5A296481211CDC430BC56B1147272B6EAC1E0F27E670066A2655B` |
 | `governanca/perfis-e-permissoes.md` | Vigente | Consolidado institucional | `A22114B1860250FC2558B8CBA798BFD76506FC4F890FD60C9D701FEF9BC2061D` |
 | `governanca/regras-de-negocio.md` | Vigente | Consolidado institucional | `B0657B96AF23205C002F510A827E73F00FE069822F4583EFE87F96EF9E646787` |
@@ -61,8 +61,8 @@ Este inventário registra todos os arquivos preservados após a curadoria de 202
 | `levantamento-de-requisitos/fontes-canonicas/requisitos-originais/lista_de_funcionalidades_tecnicas.md` | Fonte | Levantamento original | `82FF518EBDFDC91E5222B8F416BB9C29AC00E64F9EEB68544EFA4027CD4CC087` |
 | `levantamento-de-requisitos/fontes-canonicas/requisitos-originais/pontos_em_aberto.md` | Fonte | Levantamento original | `AE9DDCF02F482EE991B0BDD0AC46E922FCB2844C94A4BC34E19A67658E157666` |
 | `levantamento-de-requisitos/fontes-canonicas/requisitos-originais/README.md` | Índice | Orientação de precedência e preservação | `FEDB61E5E9826E0CB272DBA695D7824797F313A48445F1683A9741BF619E5491` |
-| `planejamento/backlog-completo.xlsx` | Vigente | Backlog operacional | `ADD659A0F83326B34E2FBA758DE85AF1913430C4247544A87C83252C23375D05` |
-| `relatorios/documentacao-projeto/relatorio-de-mudancas.md` | Acompanhamento | Biblioteca STC | `CBB7ADAA33E23A4C4AAF123ABE4FA431AF838187CBEF5C0CD256109C3430395F` |
+| `planejamento/backlog-completo.xlsx` | Vigente | Backlog operacional | `25D06734C4F528C46E72860FE67D70F03AE5345E20A3D5B6C8221564CD4E4B4A` |
+| `relatorios/documentacao-projeto/relatorio-de-mudancas.md` | Acompanhamento | Biblioteca STC | `C99C65AF7F23D867C6A3E2FE87F1BA3F26F2123872FCEB35EB8D96CA3B3567F4` |
 | `relatorios/documentacao-projeto/relatorio-sintese-outubro.docx` | Acompanhamento | Síntese do projeto até 13/10/2026 | `8C175A51517FF515498855BE37B8CA72CDF1F4590B8BA0B2C64AAB548C01AAFA` |
 | `relatorios/FAPEMA/modelos/atividades-extras.xlsx` | Relatório FAPEMA | Acervo FAPEMA | `90F7B243FB6C62DAF551F6466C875073EA4F89E17839ECC40896C4718EE16CF3` |
 | `relatorios/FAPEMA/modelos/modelo de relatorio quinzenal - responsavel.docx` | Relatório FAPEMA | Acervo FAPEMA | `3A0F5C020A61C09AFE1465DF43DDB59143F739CC64D0633A2E597CEBE5355833` |

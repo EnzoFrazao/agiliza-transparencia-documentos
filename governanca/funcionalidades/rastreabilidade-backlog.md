@@ -28,7 +28,7 @@ ambiente real, carga operacional do piloto e UAT continuam abertos. Ver a
 
 | Capacidade | Planejamento | Fluxo dominante |
 | --- | --- | --- |
-| Fundação, transporte, acesso e isolamento | Sprints 9–10; fundação em andamento, acesso concluído tecnicamente | V1 — pré-requisitos |
+| Fundação, transporte, acesso e isolamento | Sprints 9–10; fundação e acesso concluídos tecnicamente; o PostgreSQL institucional segue com a homologação | V1 — pré-requisitos |
 | Publicação e coleta variável/fixa | Sprints 11–14; concluída tecnicamente em `main` | V1 e coleta MVP |
 | Coordenação, validação, histórico e operação | A definir | Coleta MVP e gestão interna |
 | Qualidade, piloto e homologação | A definir; homologação ensaiada, UAT e ambiente real pendentes | Transversal |
