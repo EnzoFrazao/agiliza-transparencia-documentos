@@ -1,7 +1,7 @@
 # Regras de negócio — Agiliza Transparência
 
-**Versão:** 8.2  
-**Data:** 2026-10-19  
+**Versão:** 8.3  
+**Data:** 2026-10-21  
 **Fontes normativas:** decisões de 31/08 em
 [`decisoes-de-reunioes/2026-08-31-reuniao-apresentacao-agiliza.md`](decisoes-de-reunioes/2026-08-31-reuniao-apresentacao-agiliza.md)
 e consolidação posterior registrada em [`contexto.md`](contexto.md).
@@ -23,6 +23,21 @@ resposta ao ser escolhido, e o RF-014 continua valendo só para o MVP completo. 
 lista de informações solicitadas. O envio gera comprovante em PDF com protocolo, “recebido para
 conferência”, sem afirmar validação do conteúdo; na V1 isso atende ao RF-016 apenas para o envio
 atual, sem reenvio.
+
+**Revisão confirmada em 21/10/2026:** o piloto passa a ser terceirizados, e o objeto fixo deixa de
+ser imutável no ciclo. Os metadados do Tesauro são o máximo que a STC pode pedir. Os mínimos vêm
+marcados, e a STC acrescenta ou retira informações, até restar uma. As UGs do mapeamento vêm
+marcadas, e a STC pode alterá-las. Na publicação, o sistema gera a planilha com as informações
+escolhidas, e cada resposta é conferida contra ela. As observações do ciclo aceitam um arquivo de
+orientação. Isso revê, na V1, os seguintes pontos:
+- §2.1, no trecho do objeto fixo com XLSX oficial;
+- §2.2, nos itens “modelo XLSX oficial e versionado” e “UGs oficiais travadas”;
+- RF-002, RF-061, RF-081, RF-091 e RF-104;
+- RF-086, porque no fixo a chave focal deixa de ser a única configuração editável;
+- RN-008, CA-001 e CA-011.
+
+O número SEI continua um por ciclo (RF-005 e RN-002). Ver a
+[decisão de 21/10](decisoes-de-reunioes/2026-10-21-reuniao-chefia-ajustes-v1-e-piloto-terceirizados.md).
 
 ## 1. Objetivo
 

@@ -25,6 +25,12 @@ servidor assim que o respondente o escolhe; não há botão “Salvar rascunho�
 a lista de informações solicitadas. Ver a revisão na
 [decisão de escopo](../decisoes-de-reunioes/2026-10-16-recorte-catalogo-v1-e-tesauro.md).
 
+**Revisão de 21/10/2026:** o MT-0018 e a SINFRA saíram do piloto; o primeiro objeto passa a ser
+terceirizados, com UGs a definir. No objeto fixo, a STC passa a escolher as informações e as UGs,
+e o sistema gera a planilha de cada coleta. As linhas do caminho fixo abaixo que falam em XLSX
+oficial cadastrado descrevem a V1 entregue até 19/10. Ver a
+[decisão de 21/10](../decisoes-de-reunioes/2026-10-21-reuniao-chefia-ajustes-v1-e-piloto-terceirizados.md).
+
 ## Situação observada em 2026-10-19
 
 O repositório canônico privado

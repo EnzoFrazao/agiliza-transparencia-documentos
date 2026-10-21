@@ -2,6 +2,12 @@
 
 **Origem:** confirmação do responsável pelo projeto nesta conversa.
 **Status:** decisão de escopo; mecanismo futuro ainda não especificado.
+**Atualização (21/10/2026):** o MT-0018 e a SINFRA saíram do piloto, e o primeiro objeto passa a
+ser terceirizados. O objeto fixo também deixou de ser imutável no ciclo: a STC escolhe as
+informações e as UGs, e o sistema gera a planilha. Ver a
+[decisão de 21/10](2026-10-21-reuniao-chefia-ajustes-v1-e-piloto-terceirizados.md). O restante
+deste recorte continua valendo: sem cadastro livre de objetos novos na V1, evolução pelo Tesauro e
+resposta por arquivos.
 
 ## Decisão
 

@@ -14,21 +14,23 @@
 >
 > **Status da fase:** entrevistas da 1ª rodada **encerradas** (STC: 4; UGs: 5, em 4 órgãos); **DETRAN e PM** ouvidos na sequência (UGs novas). Restam órgãos e a **TI da ouvidoria**, ouvidos **durante o desenvolvimento**. **O protótipo visual do MVP 1.0 está construído** (front-end only, React/TS, auditado e publicado). A fase agora é **validar o MVP/requisitos com a STC e refinar o protótipo**, antes de construir o MVP com backend. O **estado detalhado do protótipo** fica em `andamento_do_prototipo.md` (documento à parte, para não misturar status de implementação com as decisões de produto).
 
-> **Encaminhamento técnico (snapshot 2026-10-19):** o repositório canônico privado
+> **Encaminhamento técnico (snapshot 2026-10-21):** o repositório canônico privado
 > [`Oxygeni-Projetos-Estagiarios/agiliza-stc`](https://github.com/Oxygeni-Projetos-Estagiarios/agiliza-stc)
-> mantém a fundação Laravel/Inertia e a V1 HTTP em `main` (`c6066b9`). O código contém domínio
-> persistente, PostgreSQL validado por migrations, API, cliente TypeScript e telas `/v1` para
-> coleta fixa e variável, com comprovante de envio em PDF (PR #10) e a preparação para homologação
-> (PR #11, `18c345b`, 19/10). A imagem de produção e a homologação foram ensaiadas; ambiente real,
-> carga operacional do piloto e UAT com a STC e a SINFRA seguem abertos. O estado detalhado está em
-> [`funcionalidades/v1-minima.md`](funcionalidades/v1-minima.md). O schema
+> mantém a fundação Laravel/Inertia e a V1 HTTP em `main` (merge `dec25e9`, 20/10). O código contém
+> domínio persistente, PostgreSQL validado por migrations, API, cliente TypeScript e telas `/v1`
+> para coleta fixa e variável, com comprovante de envio em PDF (PR #10) e a preparação para
+> homologação (PR #11, `18c345b`, 19/10). A imagem de produção e a homologação foram ensaiadas. O
+> estado detalhado está em [`funcionalidades/v1-minima.md`](funcionalidades/v1-minima.md). O schema
 > continua evoluindo exclusivamente por migrations; não haverá envio ao GitLab ou ao ambiente da
 > STC antes de a solução estar completa e pronta. Ver a
 > [decisão de 01/10](decisoes-de-reunioes/2026-10-01-fundacao-tecnica-e-composicao-da-equipe.md).
-> A V1 será apresentada à chefia em 21/10/2026, às 10h (a data inicial era 20/10), e testada por
-> ela na mesma semana. Depois dos
-> ajustes, vêm a implantação na SINFRA, com feedback para a versão seguinte, e a expansão gradual
-> às demais UGs e objetos; ver o
+> A V1 foi apresentada à chefia em 21/10/2026. O piloto passou a ser terceirizados (MT-0015), com
+> UGs a definir, e o MT-0018 e a SINFRA saíram. A criação de ciclo recebe ajustes: tela em cinco
+> passos, objeto fixo com informações e UGs editáveis, planilha gerada por coleta e arquivo nas
+> observações. A TI da STC criou o repositório no GitLab e a porta da homologação. Depois vem a
+> expansão gradual às demais UGs e objetos. Ver a
+> [decisão de 21/10](decisoes-de-reunioes/2026-10-21-reuniao-chefia-ajustes-v1-e-piloto-terceirizados.md),
+> que substitui o passo da SINFRA do
 > [encaminhamento de 19/10](decisoes-de-reunioes/2026-10-19-apresentacao-v1-e-implantacao-gradual.md).
 
 Você está assumindo o desenvolvimento de um projeto real, já iniciado, vinculado à **Secretaria de Transparência e Controle do Estado do Maranhão (STC/MA)**. Existe protótipo visual, documentação, reuniões e entrevistas realizadas e decisões que não devem ser revertidas. Leia tudo com atenção antes de ajudar.
@@ -782,7 +784,7 @@ medicoes     (id, contrato_id, numero, valor, os_ref, sei_ref, status_obra['anda
 
 **Legenda:** ✔ resolvida/direcionada na v8.0 · ⏳ segue aberta (próxima reunião).
 
-- ✔ **P-001 — IA: verificar × transformar.** **Resolvido: verificar.** No MVP a verificação é **manual (STC) + checagem estrutural**; a IA (checador de formato) é **futura**. Transformar está descartado.
+- ⏳ **P-001 — IA: verificar × transformar.** **Resolvido: verificar.** No MVP a verificação é **manual (STC) + checagem estrutural**; a IA (checador de formato) é **futura**. Transformar está descartado. *(Reaberto em 21/10/2026: a chefia retomou a extração e padronização por IA do que a UG enviar; primeiro valida-se o fluxo atual, depois a equipe propõe a arquitetura. Ver a [decisão de 21/10](decisoes-de-reunioes/2026-10-21-reuniao-chefia-ajustes-v1-e-piloto-terceirizados.md).)*
 - ✔ **P-002 — Usar o Tesauro?** **Resolvido: sim, como fonte externa** (Tema 3), **sem edição na plataforma**. Objetos fixos exportados do Tesauro.
 - ✔ **P-003 — Método de entrada.** **Resolvido por tipo:** XLSX oficial e uploads no fixo; campos
   diretos e/ou uploads no variável.
@@ -806,7 +808,7 @@ medicoes     (id, contrato_id, numero, valor, os_ref, sei_ref, status_obra['anda
 - 🔄 **P-019 — Coleta = objeto+órgão × objeto+setor?** **Avançou (v9.0):** o protótipo e a reunião trabalham com **1 coleta = 1 objeto, por órgão**, com distribuição interna entre setores via ponto focal (link único; vários pedidos = vários ciclos). A questão órgão × setor **não fechou formalmente**, mas a operação está desenhada por-órgão-com-distribuição-interna.
 - ✔ **P-020 — Toggle de validação do ponto focal (P2): por órgão × por ciclo?** **DECIDIDO: por órgão.** Cada UG tem o seu; **UGs diferentes podem ter toggles diferentes no mesmo ciclo**. *(O protótipo aplica por ciclo — ajustar para por órgão é refinamento.)*
 - 🔄 **P-021 — Resposta negativa: por coleta inteira × por linha/campo?** **Avançou (v9.0):** virou **“Declaração de não ocorrência”** com **duas saídas** (não tem a informação × não tem atualização), pela **coleta**, passando pelo ponto focal (§0.3.5). A **granularidade** linha/campo segue futura/aberta.
-- ⏳ **P-022 — Como chega o mapeamento informação↔órgão:** atualização dentro do Tesauro × documento à parte. **Segue aberto** — Alessandra vai montá-lo item a item; DETRAN/PM reforçaram que ele muda (PM licitações → adjunta).
+- ⏳ **P-022 — Como chega o mapeamento informação↔órgão:** atualização dentro do Tesauro × documento à parte. **Segue aberto** — Alessandra vai montá-lo item a item; DETRAN/PM reforçaram que ele muda (PM licitações → adjunta). *(21/10/2026: no objeto fixo, o mapeamento passa a só pré-selecionar UGs, que a STC pode alterar; no piloto de terceirizados, as UGs saem do levantamento de contratos feito pelo Thiago.)*
 
 **Pendências surgidas do protótipo/Tesauro (v9.0):**
 - ⏳ **P-023 — Justificativa de anexo faltante** não destrava o envio no protótipo — confirmar o comportamento desejado.
@@ -815,7 +817,9 @@ medicoes     (id, contrato_id, numero, valor, os_ref, sei_ref, status_obra['anda
 
 **Pendências levantadas na revisão do protótipo (v9.0):**
 - ✔ **P-026 — Objeto fixo: pode alterar campos obrigatórios? SUPERADO.** O ciclo apenas referencia o
-  modelo XLSX oficial e versionado do Catálogo; não monta nem altera sua estrutura.
+  modelo XLSX oficial e versionado do Catálogo; não monta nem altera sua estrutura. *(Revisto em
+  21/10/2026: a STC escolhe as informações do objeto fixo entre os mínimos e o máximo do Tesauro, e
+  o sistema gera a planilha de cada coleta.)*
 - ⏳ **P-027 — Objetos automatizados na plataforma:** os 8 automatizados **ficam fora da criação** (consenso); os **metadados/campos obrigatórios** deles entram como **referência/futuro** ou não? *Lean:* manter os metadados no catálogo (baixo custo, referência e futura integração), excluídos da criação — como o protótipo já faz.
 - ⏳ **P-028 — Armazenamento (transição protótipo → MVP):** o protótipo guarda **tudo em código/memória**; no MVP, dados transacionais (ciclos, coletas, respostas, arquivos) vão para **banco** (§22-23, Postgres). O **Tesauro** fica em **banco** (importado pelo gerador, atualizável sem redeploy, coerente com “fonte externa/não estática”) ou permanece **versionado em código**? *Lean:* banco para o MVP, com o script de geração virando pipeline de importação.
 - ⏳ **P-029 — Sinalização da UG à STC (contestação/encaminhamento):** ao receber um ciclo, a UG poder **sinalizar** que talvez não tenha a informação / **pedir alteração**, e **apontar qual outra UG** tem aquele dado (ex.: pedido foi ao Batalhão 8, mas a informação é do Batalhão 20). O **reencaminhamento à UG correta após uma não ocorrência já está confirmado** (a STC edita o ciclo — ver §0.3.5); **em aberto** fica o **escopo de um canal de sinalização mais amplo** (contestar o pedido em si, fora da não ocorrência) e se ele entra no **MVP**. **Alto valor:** alimenta a correção do mapeamento (P-022/§15).
@@ -826,7 +830,7 @@ medicoes     (id, contrato_id, numero, valor, os_ref, sei_ref, status_obra['anda
 - ⏳ **P-030 — Identificação por CPF via API (base de servidores):** usar **CPF** contra uma **base existente de todos os servidores das UGs** (via API) em vez de login e-mail/senha. **Robustece a identificação, reduz fraude de autocadastro e pré-preenche o cadastro.** Evolui P-016 (hoje R3/híbrido) e a autenticação (§11/§22). **Depende de:** confirmar acesso/propriedade da base — concretamente o **login/banco do SEI (CPF+senha), operado pela ATI** (Agência Estadual de TI do MA), com **STI/Antônio** coordenando pela STC —, **LGPD/autorização** e um **fallback** para quem não está na base (terceirizados/adjuntas). *Lean:* perseguir, com Keycloak podendo federar/consumir essa base como fonte de identidade. Desenho detalhado (Sanctum+RLS, CPF, cenários da ATI): `docs/ideia de login.md`.
 
 **Ações operacionais que destravam (não são decisão de produto):**
-- ✔ **Escolher o objeto-piloto** — **resolvido em 16/10/2026:** MT-0018 com a SINFRA (UG 531010) como única destinatária; ver a [decisão de escopo](decisoes-de-reunioes/2026-10-16-recorte-catalogo-v1-e-tesauro.md).
+- ✔ **Escolher o objeto-piloto** — **resolvido em 16/10/2026:** MT-0018 com a SINFRA (UG 531010) como única destinatária; ver a [decisão de escopo](decisoes-de-reunioes/2026-10-16-recorte-catalogo-v1-e-tesauro.md). *(Substituído em 21/10/2026: o piloto passa a ser terceirizados, MT-0015, com UGs a definir; ver a [decisão de 21/10](decisoes-de-reunioes/2026-10-21-reuniao-chefia-ajustes-v1-e-piloto-terceirizados.md).)*
 - ⏳ **Lista da Alessandra (UGs × objetos fixos)** — é o insumo de P-022; segue pendente e bloqueia a pré-seleção de UGs na criação.
 - ✔ **Divergência técnico × levantamento (era ação pendente):** com os dois documentos disponíveis, a divergência foi identificada — sigilo (SRS mantém, técnico removeu), obras (SRS modela, técnico trata como envio por área) e P-012. Ambos estão defasados frente à v8.0/v9.0 e serão **realinhados**.
 
@@ -836,9 +840,15 @@ aplicação, em [`agiliza-stc/specs/open-decisions.md`](../../agiliza-stc/specs/
 não se confundem com a numeração acima.
 - ⏳ **Contas STC de produção** (`agiliza-stc` P-002) — quem pode pedir uma conta e como se recupera o acesso. Hoje a conta é criada por comando técnico.
 - ⏳ **Rascunhos de outras pessoas da UG** (`agiliza-stc` P-008) — depois que a UG responde, manter, deixar o dono apagar ou descartar os rascunhos não enviados.
-- ⏳ **Hospedagem, operação e cópias de segurança** (`agiliza-stc` P-009) — onde a V1 roda, quem a opera e qual a rotina e a retenção das cópias. Responsáveis esperados: TI da STC e Guilherme.
+- ⏳ **Hospedagem, operação e cópias de segurança** (`agiliza-stc` P-009) — onde a V1 roda, quem a opera e qual a rotina e a retenção das cópias. Responsáveis esperados: TI da STC e Guilherme. *(21/10/2026: a TI da STC criou o repositório no GitLab e separou a porta da homologação; servidor web e cópias seguem em aberto.)*
 - ⏳ **Varredura dos arquivos recebidos** (`agiliza-stc` P-010) — se os arquivos das UGs passam por antivírus antes de a STC baixá-los. Hoje não há varredura.
-- ⏳ **Dados das planilhas no banco, após a V1** (`agiliza-stc` P-011) — se as linhas dos XLSX enviados entram no banco para consulta e relatório. Hoje ficam guardadas só como arquivo.
+- ⏳ **Dados das planilhas no banco, após a V1** (`agiliza-stc` P-011) — se as linhas dos XLSX enviados entram no banco para consulta e relatório. Hoje ficam guardadas só como arquivo. *(21/10/2026: a chefia quer evoluir para dados estruturados; o momento ficou em aberto.)*
+
+**Temas novos da reunião de 21/10/2026** (ver a [decisão de 21/10](decisoes-de-reunioes/2026-10-21-reuniao-chefia-ajustes-v1-e-piloto-terceirizados.md)):
+- ⏳ **Metadados mínimos no Tesauro** — coluna nova; a Alessandra revisa objeto por objeto, começando por terceirizados. Os metadados do Tesauro passam a ser o máximo que a STC pode pedir.
+- ⏳ **Portal novo** — eixos, agrupamentos e temas. A princípio o Agiliza não muda; falta correlacionar o Tesauro com o portal e traduzir o que é coletado para o modelo dele. A equipe precisa conhecer a arquitetura da informação do portal novo.
+- ⏳ **Município nas planilhas** — acrescentar a informação de município quando couber, para o filtro futuro do portal.
+- ⏳ **Arquitetura de IA** — proposta com modelo local, pago ou combinado, infraestrutura e custo, depois de validar o fluxo atual (P-001).
 
 > **Dependências/ações que independem de novas UGs:** conversa com a **Alessandra** (P-002); **APIs e infra** com **Antônio/STI** (P-015); **TI da ouvidoria** (questionário — respondente real de vários dados); confirmar nº de objetos manuais (“8 a 10”) e de órgãos (“60+”). *(A IN do ponto focal não será mexida nesta fase.)* *(v8.0: P-002 e o Alerta §17 já resolvidos; a ação-chave com a Alessandra passa a ser **montar o mapeamento informação↔órgão** — P-022.)*
 
@@ -935,7 +945,10 @@ padrão, e **O** passa a distinguir objeto fixo imutável no ciclo de objeto var
 ### 32.1. Objeto fixo, mapeamento oficial e catálogo editável
 
 - No objeto fixo, campos, anexos e UGs vêm integralmente do Tesauro e do mapeamento oficial da
-  Alessandra. Nada pode ser acrescentado ou removido durante a criação do ciclo.
+  Alessandra. Nada pode ser acrescentado ou removido durante a criação do ciclo. *(Revisto em
+  21/10/2026: os mínimos e as UGs do mapeamento vêm marcados, e a STC pode acrescentar informações
+  até o máximo do Tesauro, retirá-las até restar uma e alterar as UGs; ver a
+  [decisão de 21/10](decisoes-de-reunioes/2026-10-21-reuniao-chefia-ajustes-v1-e-piloto-terceirizados.md).)*
 - No objeto variável, a STC escolhe campos diretos e/ou uploads, com ao menos um item, além das UGs.
 - O catálogo importado passa a ser editável por qualquer Servidor STC, com auditoria de autor, data,
   valor anterior e valor novo. A gestão do Tesauro externo continua fora do MVP.
@@ -1080,7 +1093,9 @@ Esta seção substitui formulações incompatíveis das seções anteriores.
 ### 35.3. Planilhas, Catálogo e snapshots
 
 - Cada objeto possui modelo XLSX oficial cadastrado. O sistema disponibiliza o arquivo e não gera
-  sua estrutura.
+  sua estrutura. *(Revisto em 21/10/2026: o sistema passa a gerar, na publicação, a planilha com as
+  informações escolhidas para a coleta; ver a
+  [decisão de 21/10](decisoes-de-reunioes/2026-10-21-reuniao-chefia-ajustes-v1-e-piloto-terceirizados.md).)*
 - Quando a planilha principal é obrigatória, ela basta para o piso e anexos são opcionais. Quando
   não é obrigatória, ao menos um upload é exigido; campo direto sozinho não conclui.
 - Todo Servidor STC lê o Catálogo; `catalogo-e-ugs` restringe somente mutação. Alterações aprovadas

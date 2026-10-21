@@ -95,3 +95,24 @@ Relatórios sob demanda devem ser salvos nesta própria pasta com o padrão
 - Em `planejamento/backlog-completo.xlsx`, a célula D17 da aba "Lista completa" e a E9 da aba "Sprint 14" deixaram de dizer que o PR #13 estava aberto. Os status continuam "Em andamento", porque o ambiente real, a hospedagem e o UAT seguem pendentes. Nenhuma outra célula mudou, e o Excel abriu o arquivo sem reparo.
 - A cópia do backlog no Google Sheets, usada pelo quadro Trello, não foi alterada.
 - Recalculados os SHA-256 do inventário.
+
+## 2026-10-21 — Reunião com a chefia e ajustes da V1
+
+- A V1 foi apresentada à chefia da STC em 21/10/2026. Depois, o responsável conversou com o Thiago sobre a criação de ciclo. O registro foi feito a partir da transcrição automática da reunião e do resumo do responsável. A transcrição não entrou no acervo.
+- Nova decisão: `governanca/decisoes-de-reunioes/2026-10-21-reuniao-chefia-ajustes-v1-e-piloto-terceirizados.md`. Ela registra:
+  - a troca do piloto (sai o MT-0018 com a SINFRA, entra terceirizados);
+  - o Tesauro com máximo e mínimos;
+  - a homologação no GitLab da STC;
+  - os sete ajustes da criação de ciclo;
+  - os temas do portal novo, dos dados estruturados, da IA e da equipe.
+- Notas de atualização nas decisões de 16/10 e 19/10, apontando a nova.
+- Em `governanca/contexto.md`:
+  - o encaminhamento técnico passou a ser o de 21/10;
+  - §32.1 e §35.3 ganharam notas de revisão;
+  - no §28, P-001 foi reaberto, P-022, P-026 e o objeto-piloto ganharam notas, e P-009 e P-011 foram complementados;
+  - entraram os temas novos da reunião.
+- `governanca/regras-de-negocio.md` passou à versão 8.3, com o bloco "Revisão confirmada em 21/10/2026". O número SEI continua um por ciclo.
+- `governanca/funcionalidades/v1-minima.md` ganhou a nota de revisão de 21/10.
+- O detalhamento técnico ficou em `agiliza-stc/specs/` (ajustes pós-chefia e ADR-0003). Nenhum código mudou.
+- `planejamento/backlog-completo.xlsx` não foi alterado: o responsável vai adaptar o backlog depois. A cópia no Google Sheets também não mudou.
+- Recalculados os SHA-256 do inventário.

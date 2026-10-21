@@ -6,6 +6,10 @@
 21/10/2026, às 10h.
 **Atualização (19/10/2026):** a reunião, prevista para 20/10/2026, foi remarcada para 21/10/2026,
 às 10h, segundo o responsável pelo projeto. A sequência não mudou.
+**Atualização (21/10/2026):** na reunião, a chefia trocou o piloto. O MT-0018 e a SINFRA saem, e
+entra terceirizados, com UGs a definir. O passo 4 abaixo fica substituído pela
+[decisão de 21/10](2026-10-21-reuniao-chefia-ajustes-v1-e-piloto-terceirizados.md), que também
+define o teste em homologação no ambiente da STC.
 
 ## Sequência acordada
 
