@@ -61,8 +61,8 @@ Este inventário registra todos os arquivos preservados após a curadoria de 202
 | `levantamento-de-requisitos/fontes-canonicas/requisitos-originais/lista_de_funcionalidades_tecnicas.md` | Fonte | Levantamento original | `82FF518EBDFDC91E5222B8F416BB9C29AC00E64F9EEB68544EFA4027CD4CC087` |
 | `levantamento-de-requisitos/fontes-canonicas/requisitos-originais/pontos_em_aberto.md` | Fonte | Levantamento original | `AE9DDCF02F482EE991B0BDD0AC46E922FCB2844C94A4BC34E19A67658E157666` |
 | `levantamento-de-requisitos/fontes-canonicas/requisitos-originais/README.md` | Índice | Orientação de precedência e preservação | `FEDB61E5E9826E0CB272DBA695D7824797F313A48445F1683A9741BF619E5491` |
-| `planejamento/backlog-completo.xlsx` | Vigente | Backlog operacional | `D2CBDE469584457108EE39DA7431C96F8663CB9984DA09EA425FDE1985B2C5BD` |
-| `relatorios/documentacao-projeto/relatorio-de-mudancas.md` | Acompanhamento | Biblioteca STC | `B0635C1E21D81E6783439C0272A334D2673CD27F619AEF76268223DD976D01E8` |
+| `planejamento/backlog-completo.xlsx` | Vigente | Backlog operacional | `18957A1C66D69F7AED2456497A8EF8F665DA97037C0CDCB9535138F2A35135DD` |
+| `relatorios/documentacao-projeto/relatorio-de-mudancas.md` | Acompanhamento | Biblioteca STC | `60E4CF5431FB20DAB6E61D02D461F115550C29DFA442C61F2E8A5326910D451A` |
 | `relatorios/documentacao-projeto/relatorio-sintese-outubro.docx` | Acompanhamento | Síntese do projeto até 13/10/2026 | `8C175A51517FF515498855BE37B8CA72CDF1F4590B8BA0B2C64AAB548C01AAFA` |
 | `relatorios/FAPEMA/modelos/atividades-extras.xlsx` | Relatório FAPEMA | Acervo FAPEMA | `90F7B243FB6C62DAF551F6466C875073EA4F89E17839ECC40896C4718EE16CF3` |
 | `relatorios/FAPEMA/modelos/modelo de relatorio quinzenal - responsavel.docx` | Relatório FAPEMA | Acervo FAPEMA | `3A0F5C020A61C09AFE1465DF43DDB59143F739CC64D0633A2E597CEBE5355833` |

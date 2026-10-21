@@ -88,3 +88,10 @@ Relatórios sob demanda devem ser salvos nesta própria pasta com o padrão
 - As entradas anteriores deste relatório que citam 20/10 continuam como estavam, porque registram o que valia quando foram escritas.
 - A cópia do backlog no Google Sheets, usada pelo quadro Trello, não foi alterada.
 - Recalculados os SHA-256 do inventário.
+
+## 2026-10-20 — Merge do PR #13
+
+- O Guilherme integrou à `main` do `agiliza-stc` o PR #13 em 20/10/2026 (merge `dec25e9`). Ele faz a imagem de produção subir com vários processos PHP; antes havia um só.
+- Em `planejamento/backlog-completo.xlsx`, a célula D17 da aba "Lista completa" e a E9 da aba "Sprint 14" deixaram de dizer que o PR #13 estava aberto. Os status continuam "Em andamento", porque o ambiente real, a hospedagem e o UAT seguem pendentes. Nenhuma outra célula mudou, e o Excel abriu o arquivo sem reparo.
+- A cópia do backlog no Google Sheets, usada pelo quadro Trello, não foi alterada.
+- Recalculados os SHA-256 do inventário.
