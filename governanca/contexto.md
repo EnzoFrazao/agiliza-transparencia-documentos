@@ -24,8 +24,9 @@
 > continua evoluindo exclusivamente por migrations; não haverá envio ao GitLab ou ao ambiente da
 > STC antes de a solução estar completa e pronta. Ver a
 > [decisão de 01/10](decisoes-de-reunioes/2026-10-01-fundacao-tecnica-e-composicao-da-equipe.md).
-> A V1 foi apresentada à chefia em 21/10/2026. O piloto passou a ser terceirizados (MT-0015), com
-> UGs a definir, e o MT-0018 e a SINFRA saíram. A criação de ciclo recebe ajustes: tela em cinco
+> A V1 foi apresentada à chefia em 21/10/2026. O piloto passou a ser terceirizados (MT-0015), e o
+> MT-0018 e a SINFRA saíram. As UGs de cada coleta são escolhidas pela STC entre os 73 órgãos do
+> portal do governo ([cópia datada](mapeamentos/orgaos-portal-ma-2026-10-21.md)). A criação de ciclo recebe ajustes: tela em cinco
 > passos, objeto fixo com informações e UGs editáveis, planilha gerada por coleta e arquivo nas
 > observações. A TI da STC criou o repositório no GitLab e a porta da homologação. Depois vem a
 > expansão gradual às demais UGs e objetos. Ver a
@@ -784,7 +785,7 @@ medicoes     (id, contrato_id, numero, valor, os_ref, sei_ref, status_obra['anda
 
 **Legenda:** ✔ resolvida/direcionada na v8.0 · ⏳ segue aberta (próxima reunião).
 
-- ⏳ **P-001 — IA: verificar × transformar.** **Resolvido: verificar.** No MVP a verificação é **manual (STC) + checagem estrutural**; a IA (checador de formato) é **futura**. Transformar está descartado. *(Reaberto em 21/10/2026: a chefia retomou a extração e padronização por IA do que a UG enviar; primeiro valida-se o fluxo atual, depois a equipe propõe a arquitetura. Ver a [decisão de 21/10](decisoes-de-reunioes/2026-10-21-reuniao-chefia-ajustes-v1-e-piloto-terceirizados.md).)*
+- ⏳ **P-001 — IA: verificar × transformar.** **Resolvido: verificar.** No MVP a verificação é **manual (STC) + checagem estrutural**; a IA (checador de formato) é **futura**. Transformar está descartado. *(Reaberto em 21/10/2026: a Alessandra retomou a extração e padronização por IA do que a UG enviar; a chefia vê isso como evolução futura. Primeiro valida-se o fluxo atual, depois a equipe propõe a arquitetura. Ver a [decisão de 21/10](decisoes-de-reunioes/2026-10-21-reuniao-chefia-ajustes-v1-e-piloto-terceirizados.md).)*
 - ✔ **P-002 — Usar o Tesauro?** **Resolvido: sim, como fonte externa** (Tema 3), **sem edição na plataforma**. Objetos fixos exportados do Tesauro.
 - ✔ **P-003 — Método de entrada.** **Resolvido por tipo:** XLSX oficial e uploads no fixo; campos
   diretos e/ou uploads no variável.
@@ -808,7 +809,7 @@ medicoes     (id, contrato_id, numero, valor, os_ref, sei_ref, status_obra['anda
 - 🔄 **P-019 — Coleta = objeto+órgão × objeto+setor?** **Avançou (v9.0):** o protótipo e a reunião trabalham com **1 coleta = 1 objeto, por órgão**, com distribuição interna entre setores via ponto focal (link único; vários pedidos = vários ciclos). A questão órgão × setor **não fechou formalmente**, mas a operação está desenhada por-órgão-com-distribuição-interna.
 - ✔ **P-020 — Toggle de validação do ponto focal (P2): por órgão × por ciclo?** **DECIDIDO: por órgão.** Cada UG tem o seu; **UGs diferentes podem ter toggles diferentes no mesmo ciclo**. *(O protótipo aplica por ciclo — ajustar para por órgão é refinamento.)*
 - 🔄 **P-021 — Resposta negativa: por coleta inteira × por linha/campo?** **Avançou (v9.0):** virou **“Declaração de não ocorrência”** com **duas saídas** (não tem a informação × não tem atualização), pela **coleta**, passando pelo ponto focal (§0.3.5). A **granularidade** linha/campo segue futura/aberta.
-- ⏳ **P-022 — Como chega o mapeamento informação↔órgão:** atualização dentro do Tesauro × documento à parte. **Segue aberto** — Alessandra vai montá-lo item a item; DETRAN/PM reforçaram que ele muda (PM licitações → adjunta). *(21/10/2026: no objeto fixo, o mapeamento passa a só pré-selecionar UGs, que a STC pode alterar; no piloto de terceirizados, as UGs saem do levantamento de contratos feito pelo Thiago.)*
+- ⏳ **P-022 — Como chega o mapeamento informação↔órgão:** atualização dentro do Tesauro × documento à parte. **Segue aberto** — Alessandra vai montá-lo item a item; DETRAN/PM reforçaram que ele muda (PM licitações → adjunta). *(21/10/2026: no objeto fixo, o mapeamento passa a só pré-selecionar UGs, que a STC pode alterar. As destinatárias possíveis de todos os objetos são os 73 órgãos do portal do governo ([cópia datada](mapeamentos/orgaos-portal-ma-2026-10-21.md)). Em terceirizados ("Por UG, caso haja contrato"), nenhuma vem marcada, e a STC escolhe a partir do levantamento de contratos feito pelo Thiago.)*
 
 **Pendências surgidas do protótipo/Tesauro (v9.0):**
 - ⏳ **P-023 — Justificativa de anexo faltante** não destrava o envio no protótipo — confirmar o comportamento desejado.
@@ -845,7 +846,7 @@ não se confundem com a numeração acima.
 - ⏳ **Dados das planilhas no banco, após a V1** (`agiliza-stc` P-011) — se as linhas dos XLSX enviados entram no banco para consulta e relatório. Hoje ficam guardadas só como arquivo. *(21/10/2026: a chefia quer evoluir para dados estruturados; o momento ficou em aberto.)*
 
 **Temas novos da reunião de 21/10/2026** (ver a [decisão de 21/10](decisoes-de-reunioes/2026-10-21-reuniao-chefia-ajustes-v1-e-piloto-terceirizados.md)):
-- ⏳ **Metadados mínimos no Tesauro** — coluna nova; a Alessandra revisa objeto por objeto, começando por terceirizados. Os metadados do Tesauro passam a ser o máximo que a STC pode pedir.
+- 🔄 **Metadados mínimos no Tesauro** — coluna nova; a Alessandra revisa objeto por objeto, começando por terceirizados. Os metadados do Tesauro passam a ser o máximo que a STC pode pedir. Terceirizados já tem os seus: 6 mínimos entre 12 metadados, listados na decisão de 21/10. Falta conferir a empresa (obrigatória na orientação, ausente dos mínimos) e o campo Órgão.
 - ⏳ **Portal novo** — eixos, agrupamentos e temas. A princípio o Agiliza não muda; falta correlacionar o Tesauro com o portal e traduzir o que é coletado para o modelo dele. A equipe precisa conhecer a arquitetura da informação do portal novo.
 - ⏳ **Município nas planilhas** — acrescentar a informação de município quando couber, para o filtro futuro do portal.
 - ⏳ **Arquitetura de IA** — proposta com modelo local, pago ou combinado, infraestrutura e custo, depois de validar o fluxo atual (P-001).

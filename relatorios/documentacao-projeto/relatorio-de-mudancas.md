@@ -122,3 +122,18 @@ Relatórios sob demanda devem ser salvos nesta própria pasta com o padrão
 - A decisão de 21/10 ganhou a seção "Detalhes da reunião", a pedido do responsável, para que o registro fique completo antes de ser repassado ao Guilherme. Ela reúne o que foi dito e não virou decisão: o portal novo, a prática da coleta e das planilhas, a IA, as telas mostradas e o material que ficou fora do acervo.
 - A seção é registro da conversa, não contrato. As decisões, os ajustes e os limites não mudaram.
 - Recalculados os SHA-256 do inventário.
+
+## 2026-10-21 — Transcrição da chefia, terceirizados e lista de órgãos
+
+- O responsável entregou a transcrição gerada pela chefia a partir da gravação. Ela identifica quem falou, e com isso a decisão de 21/10 foi corrigida:
+  - a ideia da IA de fricção mínima é da Alessandra; a chefia a vê como evolução futura e pediu a proposta de arquitetura;
+  - o Guilherme vai pedir ao professor Sérgio a confirmação com a FAPEMA;
+  - a Alessandra pode reclassificar licitação como automatizada;
+  - segundo a chefia, o objeto é fixo pelo formato, não pelos destinatários.
+
+  A transcrição não entrou no acervo, por decisão do responsável.
+- A decisão ganhou o item 6, com a linha de terceirizados (MT-0015) do Tesauro revisado: 12 metadados, 6 mínimos, atualidade, normativo e orientação. Ela também registra dois pontos a conferir com a Alessandra: a empresa, obrigatória na orientação mas ausente dos mínimos, e o campo Órgão.
+- As destinatárias possíveis de todos os objetos são os 73 órgãos ativos do portal do governo. A cópia datada ficou em `governanca/mapeamentos/orgaos-portal-ma-2026-10-21.md`, com dois pontos em aberto: a sigla EGMA repetida e a falta do código de UG.
+- Em terceirizados, nenhuma UG vem marcada: a STC escolhe a cada coleta.
+- `governanca/contexto.md` foi ajustado para as mesmas informações.
+- Recalculados os SHA-256 do inventário, e a lista de órgãos foi incluída nele.

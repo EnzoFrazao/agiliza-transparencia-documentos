@@ -5,13 +5,13 @@ Este inventário registra todos os arquivos preservados após a curadoria de 202
 
 | Local | Natureza | Origem | SHA-256 |
 | --- | --- | --- | --- |
-| `governanca/contexto.md` | Vigente | Consolidado institucional | `A648FBBAF72432BCA8936F2ED1A63A7ECA1DACE315C77E0E16A3CAAD49FD0D03` |
+| `governanca/contexto.md` | Vigente | Consolidado institucional | `9DC4309D895EEBE61B2DC338253EA994FB39CD2C6355C7CDD92681E8D8FE54CD` |
 | `governanca/arquitetura/2026-10-05-der-v1-minima.md` | Vigente | DER V1 mínima e acesso contextual | `17BD25E7F61ED4016A25944EB88D4695B4BCB22C11A3EC76354616016B3F52C6` |
 | `governanca/decisoes-de-reunioes/2026-08-31-reuniao-apresentacao-agiliza.md` | Vigente | Consolidado institucional | `B7891E9CE65B2114D2D330B956DDBE081045EF860D373445069A67DE92B02597` |
 | `governanca/decisoes-de-reunioes/2026-10-01-fundacao-tecnica-e-composicao-da-equipe.md` | Vigente | Decisão de reunião | `CF34D6F4F36C29C7F4ED98BE20F382EE4E675887C0CC262A48A9F486C866BDB8` |
 | `governanca/decisoes-de-reunioes/2026-10-16-recorte-catalogo-v1-e-tesauro.md` | Vigente | Decisão de escopo do responsável | `BB94864C30C535C5E31ED27A1DAA3EC97019670E1A54BE44CA6DEC2042D4E47A` |
 | `governanca/decisoes-de-reunioes/2026-10-19-apresentacao-v1-e-implantacao-gradual.md` | Vigente | Decisão da equipe | `2E48AE273D851D758AA35CA8EA749FC9C6DD12B3867D9CBEDA413B5686FA9E6B` |
-| `governanca/decisoes-de-reunioes/2026-10-21-reuniao-chefia-ajustes-v1-e-piloto-terceirizados.md` | Vigente | Decisão de reunião | `822A2064D9475915284C1ACBFBCBC72ACA78800DB85309E39D18748B8C7C6E6C` |
+| `governanca/decisoes-de-reunioes/2026-10-21-reuniao-chefia-ajustes-v1-e-piloto-terceirizados.md` | Vigente | Decisão de reunião | `10284F7AC8B4E37E6FF9FFE4B74B1F52978D3D094196DA968DFDE8F96F438B22` |
 | `governanca/fluxogramas/README.md` | Vigente | Índice dos fluxos consolidados | `4BDC52E7C3CB65C17F1C92955EB933C9B94749523E8813B99A84B0F86CE8C53D` |
 | `governanca/fluxogramas/v1-minima-coleta-e-resposta.md` | Vigente | Fluxo V1 mínima | `E97DADF671E90AA52EE6BDAF352A933A2BB9AC857087FB41CA29E4ADCCF4373A` |
 | `governanca/fluxogramas/backend-v1-handoff.md` | Vigente | Handoff técnico do backend para a V1 | `E4F3D31A3ECFDA193D146C552121B34EAC001F1AAF6759C540B6687BD436DD66` |
@@ -26,6 +26,7 @@ Este inventário registra todos os arquivos preservados após a curadoria de 202
 | `governanca/funcionalidades/v1-minima.md` | Vigente | Corte V1 mínima | `BF296F725B9F29979D0581BB8601C6E9B436B7C451E1854D7CC94A1901848D62` |
 | `governanca/funcionalidades/rastreabilidade-backlog.md` | Vigente | Matriz de rastreabilidade | `27CC222DB7EE38783DBA567B9C5867A9931C0890D43AA3E14DCC35BECD6BDF02` |
 | `governanca/mapeamentos/Mapeamento_preliminar_Objetos_Fontes_UGs_ate_Emendas.xlsx` | Vigente | Consolidado institucional | `6491F25580E5A296481211CDC430BC56B1147272B6EAC1E0F27E670066A2655B` |
+| `governanca/mapeamentos/orgaos-portal-ma-2026-10-21.md` | Vigente | Lista de órgãos do portal ma.gov.br, consultada em 21/10/2026 | `F404A0CC00CB2A03027FB39005E0A01DD36B9E32C92AE7F12341BD8EA40FB481` |
 | `governanca/perfis-e-permissoes.md` | Vigente | Consolidado institucional | `A22114B1860250FC2558B8CBA798BFD76506FC4F890FD60C9D701FEF9BC2061D` |
 | `governanca/regras-de-negocio.md` | Vigente | Consolidado institucional | `053B9BE5F9340E0A1B95A8A635D68A70B96C887CE1074B1D7FC3799337C7522C` |
 | `governanca/tesauro/Tesauro_MA_Transparente_v2_6_agosto_2026.xlsx` | Vigente | Consolidado institucional | `BE85C15C8B66A2268B7BE19EC43E603A81E663BC9079A2F7B607AD0AF32DBD78` |
@@ -63,7 +64,7 @@ Este inventário registra todos os arquivos preservados após a curadoria de 202
 | `levantamento-de-requisitos/fontes-canonicas/requisitos-originais/pontos_em_aberto.md` | Fonte | Levantamento original | `AE9DDCF02F482EE991B0BDD0AC46E922FCB2844C94A4BC34E19A67658E157666` |
 | `levantamento-de-requisitos/fontes-canonicas/requisitos-originais/README.md` | Índice | Orientação de precedência e preservação | `FEDB61E5E9826E0CB272DBA695D7824797F313A48445F1683A9741BF619E5491` |
 | `planejamento/backlog-completo.xlsx` | Vigente | Backlog operacional | `18957A1C66D69F7AED2456497A8EF8F665DA97037C0CDCB9535138F2A35135DD` |
-| `relatorios/documentacao-projeto/relatorio-de-mudancas.md` | Acompanhamento | Biblioteca STC | `A9920DD877B6EA349A93146E4F5962768B03B158B55D0714FA5D851FDF2CD083` |
+| `relatorios/documentacao-projeto/relatorio-de-mudancas.md` | Acompanhamento | Biblioteca STC | `516FD3318A39240588B55A80A80D8D75AFBDED31A6A0822FFA0508F3F7AE3BBB` |
 | `relatorios/documentacao-projeto/relatorio-sintese-outubro.docx` | Acompanhamento | Síntese do projeto até 13/10/2026 | `8C175A51517FF515498855BE37B8CA72CDF1F4590B8BA0B2C64AAB548C01AAFA` |
 | `relatorios/FAPEMA/modelos/atividades-extras.xlsx` | Relatório FAPEMA | Acervo FAPEMA | `90F7B243FB6C62DAF551F6466C875073EA4F89E17839ECC40896C4718EE16CF3` |
 | `relatorios/FAPEMA/modelos/modelo de relatorio quinzenal - responsavel.docx` | Relatório FAPEMA | Acervo FAPEMA | `3A0F5C020A61C09AFE1465DF43DDB59143F739CC64D0633A2E597CEBE5355833` |
