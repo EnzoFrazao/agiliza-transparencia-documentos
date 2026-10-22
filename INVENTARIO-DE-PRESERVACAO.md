@@ -11,7 +11,7 @@ Este inventário registra todos os arquivos preservados após a curadoria de 202
 | `governanca/decisoes-de-reunioes/2026-10-01-fundacao-tecnica-e-composicao-da-equipe.md` | Vigente | Decisão de reunião | `CF34D6F4F36C29C7F4ED98BE20F382EE4E675887C0CC262A48A9F486C866BDB8` |
 | `governanca/decisoes-de-reunioes/2026-10-16-recorte-catalogo-v1-e-tesauro.md` | Vigente | Decisão de escopo do responsável | `BB94864C30C535C5E31ED27A1DAA3EC97019670E1A54BE44CA6DEC2042D4E47A` |
 | `governanca/decisoes-de-reunioes/2026-10-19-apresentacao-v1-e-implantacao-gradual.md` | Vigente | Decisão da equipe | `2E48AE273D851D758AA35CA8EA749FC9C6DD12B3867D9CBEDA413B5686FA9E6B` |
-| `governanca/decisoes-de-reunioes/2026-10-21-reuniao-chefia-ajustes-v1-e-piloto-terceirizados.md` | Vigente | Decisão de reunião | `A5F9EDE78FF2E3B12D2B02C27FCC0E7BBE212AA17523D23341B2B29E18D6FE5C` |
+| `governanca/decisoes-de-reunioes/2026-10-21-reuniao-chefia-ajustes-v1-e-piloto-terceirizados.md` | Vigente | Decisão de reunião | `822A2064D9475915284C1ACBFBCBC72ACA78800DB85309E39D18748B8C7C6E6C` |
 | `governanca/fluxogramas/README.md` | Vigente | Índice dos fluxos consolidados | `4BDC52E7C3CB65C17F1C92955EB933C9B94749523E8813B99A84B0F86CE8C53D` |
 | `governanca/fluxogramas/v1-minima-coleta-e-resposta.md` | Vigente | Fluxo V1 mínima | `E97DADF671E90AA52EE6BDAF352A933A2BB9AC857087FB41CA29E4ADCCF4373A` |
 | `governanca/fluxogramas/backend-v1-handoff.md` | Vigente | Handoff técnico do backend para a V1 | `E4F3D31A3ECFDA193D146C552121B34EAC001F1AAF6759C540B6687BD436DD66` |
@@ -63,7 +63,7 @@ Este inventário registra todos os arquivos preservados após a curadoria de 202
 | `levantamento-de-requisitos/fontes-canonicas/requisitos-originais/pontos_em_aberto.md` | Fonte | Levantamento original | `AE9DDCF02F482EE991B0BDD0AC46E922FCB2844C94A4BC34E19A67658E157666` |
 | `levantamento-de-requisitos/fontes-canonicas/requisitos-originais/README.md` | Índice | Orientação de precedência e preservação | `FEDB61E5E9826E0CB272DBA695D7824797F313A48445F1683A9741BF619E5491` |
 | `planejamento/backlog-completo.xlsx` | Vigente | Backlog operacional | `18957A1C66D69F7AED2456497A8EF8F665DA97037C0CDCB9535138F2A35135DD` |
-| `relatorios/documentacao-projeto/relatorio-de-mudancas.md` | Acompanhamento | Biblioteca STC | `455BE8EE2E5C08CEF1AE02909C59DFCF1985F4224731183FACEBC13C91114542` |
+| `relatorios/documentacao-projeto/relatorio-de-mudancas.md` | Acompanhamento | Biblioteca STC | `A9920DD877B6EA349A93146E4F5962768B03B158B55D0714FA5D851FDF2CD083` |
 | `relatorios/documentacao-projeto/relatorio-sintese-outubro.docx` | Acompanhamento | Síntese do projeto até 13/10/2026 | `8C175A51517FF515498855BE37B8CA72CDF1F4590B8BA0B2C64AAB548C01AAFA` |
 | `relatorios/FAPEMA/modelos/atividades-extras.xlsx` | Relatório FAPEMA | Acervo FAPEMA | `90F7B243FB6C62DAF551F6466C875073EA4F89E17839ECC40896C4718EE16CF3` |
 | `relatorios/FAPEMA/modelos/modelo de relatorio quinzenal - responsavel.docx` | Relatório FAPEMA | Acervo FAPEMA | `3A0F5C020A61C09AFE1465DF43DDB59143F739CC64D0633A2E597CEBE5355833` |

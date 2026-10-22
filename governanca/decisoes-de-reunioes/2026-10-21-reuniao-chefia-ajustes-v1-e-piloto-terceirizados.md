@@ -77,6 +77,103 @@ reunião. Hoje essa tela faz parte do protótipo, com dados demonstrativos.
   atual. Como contratos de bolsa de outro programa foram descontinuados, a chefia pediu que se
   confirme com a FAPEMA a situação do acordo de cooperação técnica antes desse desligamento.
 
+## Detalhes da reunião
+
+Esta seção registra pontos ditos na reunião que não viraram decisão, mas ajudam a entender as
+decisões acima. É registro da conversa, não contrato.
+
+### Portal novo
+
+- **Conceito.** A chefia apresentou o portal novo como uma mudança de conceito, centrada no
+  cidadão, que nenhum outro estado adotou. O portal continua atendendo ao que o TCE exige, e já há
+  uma proposta de mapeamento para isso.
+- **Eixos de governo.**
+  - Gestão pública: despesas, receitas, contratos e licitações, em grande parte automatizados.
+  - Pessoal: servidores, estagiários e terceirizados.
+  - Emendas parlamentares.
+  - Contas e resultados.
+- **Eixos do cidadão.**
+  - Saúde: estabelecimentos, profissionais, medicamentos, e as despesas e contratos da área.
+  - Educação: professores e escolas.
+  - Segurança: delegacias, efetivo e viaturas.
+  - Habitação: unidades entregues e regularização fundiária.
+  - Programas sociais: programas e beneficiários.
+  - Meio ambiente, entre outros.
+- **Agrupamentos.** Ao escolher um agrupamento, a pessoa vê só o que está ligado a ele:
+  - um órgão: os temas daquele órgão;
+  - um fornecedor: despesas, empenhos, licitações vencidas, contratos e obras;
+  - um servidor: remuneração, diárias e vínculos com o Estado;
+  - um parlamentar: as emendas e os empenhos ligados a elas.
+- **Temas e navegação.** Os temas são o último nível. A navegação mostra eixo, grupo e tema de
+  forma mais explicativa que a do portal atual. O conceito de "jornada" dá lugar ao de eixo.
+- **Pesquisa.** A pesquisa leva a uma resposta direta: "folha de pagamento" ou "SEDUC", por
+  exemplo. Depois, a pessoa pode refinar por órgão, servidor ou tema.
+- **Outras áreas.** O portal terá dados abertos, legislação, atendimento e participação social,
+  uma área com os itens do PNTP e uma ajuda inteligente em linguagem natural.
+- **Município.** Hoje quase nada está estruturado por município. Uma compra grande de um órgão
+  (o exemplo foi a SES) não é repartida entre os municípios.
+  - O que vem de sistema provavelmente continuará sem esse recorte.
+  - O que vem pelo Agiliza pode ganhar uma coluna de município no Tesauro e nas planilhas.
+  - O estudo fica para depois, não nesta etapa.
+- **Estrutura de dados.** A estrutura do portal terá de mudar, com tabelas de órgão, município e
+  fornecedor. A arquitetura da informação precisa ser documentada; hoje está clara só para algumas
+  pessoas.
+- **Tesauro e portal.** O Tesauro foi construído com base na legislação, não no portal. A chefia
+  considerou manter dois Tesauros correlacionados: um da informação, legal, e outro prático, do
+  portal.
+  - Um objeto pode alimentar vários temas: estagiários está em gestão pública e em pessoal.
+  - Pessoal é o tema mais buscado do portal, por isso tem destaque próprio.
+- **Coleta e publicação.** Das etapas coleta, validação, armazenamento e publicação, o Agiliza é a
+  coleta. O armazenamento do Agiliza terá de se ligar ao do portal para a publicação.
+
+### Planilhas e prática da coleta
+
+- **Menos campos.** Quanto mais campos se pedem, mais difícil é para a UG responder, e a STC vem
+  reduzindo o que pede. Por exemplo, transferências recebidas pediam cerca de dez colunas; hoje a
+  STC busca os dados no CGF e no Diário Oficial e pede só o link do instrumento.
+- **Não pedir o que a STC já sabe.** A planilha não precisa pedir a UG que responde. Se a STC já
+  tiver o início e o fim do contrato, ou a empresa, pede só o nome e o setor de lotação.
+- **Quem preenche.** Algumas informações são preenchidas pela própria STC, como a data de
+  atualização e a fonte oficial; outras, pela UG.
+- **Planilhas do Thiago.** São as que o Fernando montou e já estão prontas no controle dele, e
+  divergem dos metadados do Tesauro. Por exemplo, a planilha de estagiários não tem instituição de
+  ensino nem valor da bolsa.
+- **Normativos.** Eles dizem o que precisa ser transparente (terceirizados, por exemplo), mas não
+  fixam os campos. Os campos do Tesauro foram definidos pela equipe e, por isso, podem ser revistos.
+- **Planilha pré-preenchida.** A STC pode mandar à UG uma planilha já pré-preenchida.
+- **A quem pedir.** Para terceirizados, o Thiago usa o tipo de contrato registrado nas contratações
+  para saber quais UGs têm terceirização, e manda o pedido só a elas. Estagiários vão para as
+  secretarias que têm convênios.
+- **Classificação no Tesauro.** Licitação aparece no Tesauro como não automatizada, mas a chefia
+  disse que esse dado vem entre sistemas. A classificação do Tesauro precisa ser conferida.
+
+### IA
+
+- **Fricção mínima.** A chefia quer que o servidor envie o que tiver, até um print, e que a
+  ferramenta transforme isso nas informações que a STC precisa.
+- **Pré-requisitos.** Antes de usar IA, é preciso definir um modelo de saída e os parâmetros da
+  extração. Também falta base histórica.
+- **O que a IA buscaria.** Só o que a STC ainda não tem. Por exemplo, numa licitação, fonte, UG,
+  objeto, processo, abertura, situação e modalidade já existem do lado da STC; a IA buscaria o
+  valor estimado e o link.
+- **Arquitetura.** A chefia quer saber se seria um modelo local, um pago ou os dois (o local
+  extrai e o pago revisa), e qual a infraestrutura e o custo de cada opção.
+- **Fluxo.** Com IA, o pedido à UG continua igual; muda o envio, porque a UG deixa de preencher a
+  planilha. No sistema, mudam a geração da planilha e os parâmetros passados à IA.
+- **Alcance.** A IA conferiria o conteúdo, não a veracidade.
+
+### Telas mostradas
+
+As telas de criação de ciclo e de lista de ciclos mostradas na reunião são do protótipo, com dados
+demonstrativos. A V1 tem telas próprias, mais simples, e são elas que vão para a homologação. A
+comparação tela a tela está na auditoria de telas, no repositório da aplicação. A demonstração
+publicada para a reunião caiu no meio da apresentação, e o restante foi mostrado na máquina local.
+
+### Material
+
+A transcrição automática e os prints da criação de ciclo ficaram com o responsável e não entraram
+no acervo. Ele ainda vai enviar a imagem com os metadados mínimos de terceirizados.
+
 ## Limites
 
 - Substitui o passo 4 da [sequência de 19/10](2026-10-19-apresentacao-v1-e-implantacao-gradual.md)

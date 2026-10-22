@@ -116,3 +116,9 @@ Relatórios sob demanda devem ser salvos nesta própria pasta com o padrão
 - O detalhamento técnico ficou em `agiliza-stc/specs/` (ajustes pós-chefia e ADR-0003). Nenhum código mudou.
 - `planejamento/backlog-completo.xlsx` não foi alterado: o responsável vai adaptar o backlog depois. A cópia no Google Sheets também não mudou.
 - Recalculados os SHA-256 do inventário.
+
+## 2026-10-21 — Detalhes da reunião com a chefia
+
+- A decisão de 21/10 ganhou a seção "Detalhes da reunião", a pedido do responsável, para que o registro fique completo antes de ser repassado ao Guilherme. Ela reúne o que foi dito e não virou decisão: o portal novo, a prática da coleta e das planilhas, a IA, as telas mostradas e o material que ficou fora do acervo.
+- A seção é registro da conversa, não contrato. As decisões, os ajustes e os limites não mudaram.
+- Recalculados os SHA-256 do inventário.
